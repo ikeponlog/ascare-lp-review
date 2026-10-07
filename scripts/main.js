@@ -294,7 +294,7 @@ function initMotion() {
     });
   }, { rootMargin: '0px 0px -12% 0px' });
 
-  document.querySelectorAll('[data-shiho], .solution-diagram, .vc-pc, .vc-sp, .flow-pc').forEach((el) => observer.observe(el));
+  document.querySelectorAll('[data-shiho], .solution-diagram, .vc-pc, .vc-sp, .flow-pc, .flow-sp').forEach((el) => observer.observe(el));
 }
 
 // --- to-top.js
