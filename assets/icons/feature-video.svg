@@ -1,0 +1,53 @@
+<svg width="60" height="43" viewBox="0 0 60 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ascare">
+<g id="Main">
+<g id="Section - FEATURE">
+<g id="Container">
+<g id="Container_2">
+<g id="Article" filter="url(#filter0_d_633_2)">
+<g id="Container_3">
+<g id="_&#227;&#131;&#172;&#227;&#130;&#164;&#227;&#131;&#164;&#227;&#131;&#188;_1">
+<g id="Group">
+<path id="Vector" d="M28.2306 28.8556L23.2261 25.9219V31.7883L28.2306 28.8556Z" stroke="#76C234" stroke-width="1.5" stroke-linejoin="round"/>
+<path id="Vector_2" d="M24.8428 35.3961C28.4006 35.3961 31.2847 32.4679 31.2847 28.8558C31.2847 25.2436 28.4006 22.3154 24.8428 22.3154C21.285 22.3154 18.4009 25.2436 18.4009 28.8558C18.4009 32.4679 21.285 35.3961 24.8428 35.3961Z" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<g id="Group_2">
+<path id="Vector_3" d="M55.4389 15.105V6.40995C55.4389 4.33877 53.7788 2.65332 51.7388 2.65332H36.9426C34.9047 2.65332 33.2446 4.33877 33.2446 6.40995V15.105C33.2446 17.1762 34.9047 18.8617 36.9426 18.8617H38.4644L37.6022 21.6561C37.5378 21.8672 37.6138 22.0965 37.7922 22.2229C37.8787 22.2861 37.9779 22.3161 38.0803 22.3161C38.1827 22.3161 38.2924 22.2819 38.38 22.2122L42.7545 18.8617H51.7388C53.7788 18.8617 55.4389 17.1762 55.4389 15.105Z" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+<g id="Group_3">
+<path id="Vector_4" d="M41.4586 9.07129H37.1042C36.691 9.07129 36.356 9.41141 36.356 9.83097V14.223C36.356 14.6425 36.691 14.9827 37.1042 14.9827H41.4586C41.8719 14.9827 42.2069 14.6425 42.2069 14.223V9.83097C42.2069 9.41141 41.8719 9.07129 41.4586 9.07129Z" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector_5" d="M44.8486 9.49365H52.0166" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector_6" d="M36.3374 6.07666H52.3451" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector_7" d="M44.8486 12.0273H52.0166" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector_8" d="M44.8486 14.561L50.1719 14.5932" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+</g>
+<g id="Group_4">
+<path id="Vector_9" d="M45.12 21.8866V37.9396C45.12 39.2693 44.0583 40.3473 42.7486 40.3473H6.93487C5.62517 40.3473 4.56348 39.2693 4.56348 37.9396V14.4677C4.56348 13.138 5.62517 12.0601 6.93487 12.0601H29.8056" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector_10" d="M4.84375 16.9618L29.973 16.9351" stroke="#76C234" stroke-width="1.5" stroke-linecap="round"/>
+<g id="Group_5">
+<path id="Vector_11" d="M7.93828 14.5038C7.93828 14.8628 7.65227 15.1531 7.29873 15.1531C6.94518 15.1531 6.65918 14.8628 6.65918 14.5038C6.65918 14.1449 6.94518 13.8545 7.29873 13.8545C7.65227 13.8545 7.93828 14.1449 7.93828 14.5038Z" fill="#76C234"/>
+<path id="Vector_12" d="M10.9114 14.5038C10.9114 14.8628 10.6254 15.1531 10.2719 15.1531C9.91833 15.1531 9.63232 14.8628 9.63232 14.5038C9.63232 14.1449 9.91833 13.8545 10.2719 13.8545C10.6254 13.8545 10.9114 14.1449 10.9114 14.5038Z" fill="#76C234"/>
+<path id="Vector_13" d="M13.8802 14.5038C13.8802 14.8628 13.5942 15.1531 13.2406 15.1531C12.8871 15.1531 12.6011 14.8628 12.6011 14.5038C12.6011 14.1449 12.8871 13.8545 13.2406 13.8545C13.5942 13.8545 13.8802 14.1449 13.8802 14.5038Z" fill="#76C234"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_633_2" x="-155.5" y="-33.5" width="371" height="221" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0901961 0 0 0 0 0.168627 0 0 0 0 0.207843 0 0 0 0.06 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_633_2"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_633_2" result="shape"/>
+</filter>
+</defs>
+</svg>

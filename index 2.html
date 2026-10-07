@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASCare｜外国人材のための日本語・介護教育プラットフォーム（法人向け）</title>
+  <meta name="description" content="ASCareの介護事業・外国人材教育アセットを活用した新規教育プラットフォーム。日本語・介護教育・学習管理をひとつの仕組みにし、外国人労働者の日本での仕事と生活を徹底サポートします。">
+  <meta name="theme-color" content="#76c234">
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ASCare｜外国人材のための日本語・介護教育プラットフォーム（法人向け）">
+  <meta property="og:description" content="介護施設・登録支援機関・特定技能外国人受入れ法人向けサービス。現場で活きる日本語と介護の学びを続けられる仕組みに。">
+  <meta property="og:locale" content="ja_JP">
+  <!-- TODO: og:url / og:image / canonical（本番 URL・素材未支給） -->
+
+  <link rel="preload" href="assets/fonts/woff2/zen-kaku-gothic-new-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/woff2/zen-kaku-gothic-new-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/hero-photo-02.avif" as="image" type="image/avif" media="(min-width: 1024px)" fetchpriority="high">
+  <link rel="preload" href="assets/img/hero-bg-wave-sp.avif" as="image" type="image/avif" media="(max-width: 1023.98px)" fetchpriority="high">
+  <link rel="preload" href="assets/img/hero-sp-photo-01.avif" as="image" type="image/avif" media="(max-width: 1023.98px)">
+
+  <script>
+    /* PC 1024〜1439px：フロー型セクションを 1440 基準で比例縮小する係数（stage の --u と同じ比率）。描画前に確定させて CLS を防ぐ */
+    (function () {
+      var root = document.documentElement;
+      function setZoom() { root.style.setProperty('--pc-zoom', Math.min(1, root.clientWidth / 1440)); }
+      setZoom();
+      window.addEventListener('resize', setZoom);
+    })();
+  </script>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- Material Symbols（Figma SP で使用されているアイコン名のグリフ） -->
+  <svg class="u-sprite" aria-hidden="true" focusable="false">
+    <symbol id="ms-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+    <symbol id="ms-close" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+    <symbol id="ms-arrow-forward" viewBox="0 0 24 24"><path d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></symbol>
+    <symbol id="ms-chevron-right" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+    <symbol id="ms-expand-more" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+  </svg>
+
+  <!-- 01 Header -->
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="#top">
+        <img src="assets/logo/logo.svg" alt="ASCare トップページ" width="152" height="32">
+      </a>
+      <nav class="site-header__nav" aria-label="ページ内ナビゲーション">
+        <ul class="site-header__nav-list">
+          <li><a href="#problem">課題</a></li>
+          <li><a href="#solution">サービス概要</a></li>
+          <li><a href="#feature">機能</a></li>
+          <li><a href="#benefit">導入メリット</a></li>
+          <li><a href="#flow">導入フロー</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--header" href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">
+        <span class="icon-mask icon-mask--doc" aria-hidden="true"></span>
+        <span>お問い合わせ</span>
+        <span class="icon-mask icon-mask--arrow btn__arrow" aria-hidden="true"></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sp-menu">
+        <svg class="menu-toggle__icon menu-toggle__icon--open" aria-hidden="true"><use href="#ms-menu"/></svg>
+        <svg class="menu-toggle__icon menu-toggle__icon--close" aria-hidden="true"><use href="#ms-close"/></svg>
+        <span class="menu-toggle__label" data-label-open="メニュー" data-label-close="閉じる">メニュー</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SP Menu（Figma 645:601） -->
+  <div class="sp-menu" id="sp-menu" hidden>
+    <div class="sp-menu__inner">
+      <nav class="sp-menu__nav" aria-label="メニュー">
+        <div class="sp-menu__group">
+          <p class="sp-menu__cat">サービスを知る</p>
+          <ul class="sp-menu__list">
+            <li><a href="#problem">課題<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#solution">サービス概要<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#ambassador">アンバサダー紹介<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#value-chain">教育から定着の流れ<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#feature">機能<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="sp-menu__group">
+          <p class="sp-menu__cat">法人導入を検討する</p>
+          <ul class="sp-menu__list">
+            <li><a href="#benefit">導入メリット<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#recommended">おすすめの法人・事業者<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#usecase">導入前後の比較<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#price">料金・プラン<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+            <li><a href="#flow">導入フロー<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="sp-menu__group">
+          <p class="sp-menu__cat">疑問を解消する</p>
+          <ul class="sp-menu__list">
+            <li><a href="#faq">FAQ<svg aria-hidden="true"><use href="#ms-chevron-right"/></svg></a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sp-menu__cta">
+        <a class="btn btn--sp btn--sp-primary" href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">お問い合わせ<svg aria-hidden="true"><use href="#ms-arrow-forward"/></svg></a>
+        <a class="btn btn--sp btn--sp-outline" href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">法人導入について相談する</a>
+        <p class="sp-menu__note">サービス資料、導入相談、教材サンプルの確認など、法人様の課題に合わせてご案内します。</p>
+      </div>
+      <ul class="sp-menu__legal">
+        <li><a href="terms.html">利用規約</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+        <li><a href="https://www.as-care.co.jp/" target="_blank" rel="noopener">運営会社<img src="assets/icons/external.svg" alt="（外部サイト）" width="10" height="10" class="icon-external icon-external--dark"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- 02 Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__stage">
+        <div class="hero__canvas">
+          <div class="hero__photos" aria-hidden="true">
+            <picture class="hero__photo hero__photo--01">
+              <source type="image/avif" srcset="assets/img/hero-photo-01.avif">
+              <img src="assets/img/hero-photo-01.webp" alt="" width="1323" height="1254" decoding="async">
+            </picture>
+            <picture class="hero__photo hero__photo--02">
+              <source type="image/avif" srcset="assets/img/hero-photo-02.avif">
+              <img src="assets/img/hero-photo-02.webp" alt="" width="1308" height="1222" decoding="async" fetchpriority="high">
+            </picture>
+            <div class="hero__overlay"></div>
+          </div>
+          <div class="hero__wave" aria-hidden="true"></div>
+
+          <div class="hero__intro">
+            <p class="hero__target">介護施設・登録支援機関・<br class="u-sp">特定技能外国人受入れ法人向けサービス</p>
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__title-accent">現場で活きる日本語と<br>介護の学びを</span><br>
+              <span class="hero__title-em">続けられる仕組みに</span>
+            </h1>
+            <img class="hero__underline u-pc" src="assets/illustrations/hero-underline.svg" alt="" width="422" height="46">
+            <img class="hero__underline-sp u-sp" src="assets/illustrations/hero-underline-sp.svg" alt="" width="289" height="41">
+          </div>
+
+          <div class="hero__sp-photos u-sp">
+            <picture class="hero__sp-photo hero__sp-photo--01">
+              <source type="image/avif" srcset="assets/img/hero-sp-photo-01.avif">
+              <img src="assets/img/hero-sp-photo-01.webp" alt="ノートパソコンで日本語を学ぶ介護スタッフ" width="500" height="375" decoding="async" fetchpriority="high">
+            </picture>
+            <picture class="hero__sp-photo hero__sp-photo--02">
+              <source type="image/avif" srcset="assets/img/hero-sp-photo-02.avif">
+              <img src="assets/img/hero-sp-photo-02.webp" alt="利用者に寄り添う介護スタッフ" width="660" height="495" decoding="async">
+            </picture>
+          </div>
+
+          <div class="hero__body">
+            <p class="hero__lead">ASCareの介護事業・外国人材教育アセットを活用した<br class="u-pc">新規教育プラットフォーム。外国人労働者の日本での仕事と生活を徹底サポート</p>
+            <div class="hero__cta">
+              <a class="btn btn--hero-contact" href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">
+                <span class="icon-mask icon-mask--doc u-pc" aria-hidden="true"></span>
+                <span>お問い合わせ</span>
+                <span class="icon-mask icon-mask--arrow u-pc" aria-hidden="true"></span>
+                <svg class="u-sp" aria-hidden="true"><use href="#ms-arrow-forward"/></svg>
+              </a>
+              <a class="btn btn--hero-service" href="#solution">
+                <span class="icon-mask icon-mask--info u-pc" aria-hidden="true"></span>
+                <span>サービス概要を見る</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__media">
+          <div class="hero__ambassador">
+            <p class="hero__ribbon"><span class="hero__ribbon-inner"><span class="hero__ribbon-ja">SAKUSAKU広報アンバサダー<span class="u-pc">：</span></span><br class="u-sp"><span class="hero__ribbon-en" lang="en">Shiho Sasaki</span></span></p>
+            <picture class="hero__ambassador-img" data-shiho="wave">
+              <source media="(max-width: 1023.98px)" type="image/avif" srcset="assets/img/hero-ambassador-sp.avif">
+              <source media="(max-width: 1023.98px)" type="image/webp" srcset="assets/img/hero-ambassador-sp.webp">
+              <source type="image/avif" srcset="assets/img/hero-ambassador.avif">
+              <img src="assets/img/hero-ambassador.webp" alt="手を振るSAKUSAKU広報アンバサダーのShiho Sasakiさん" width="466" height="582" decoding="async">
+            </picture>
+          </div>
+
+          <div class="hero__video" data-video-id="mLWA3Bt1VrA">
+            <button class="hero__video-button" type="button" aria-label="アンバサダー紹介動画を再生する（YouTube）" aria-haspopup="dialog" aria-controls="video-modal">
+              <picture class="hero__video-thumb">
+                <source type="image/avif" srcset="assets/img/hero-video-thumb.avif">
+                <img src="assets/img/hero-video-thumb.webp" alt="" width="862" height="578" decoding="async" loading="lazy">
+              </picture>
+              <img class="hero__video-play" src="assets/icons/play.svg" alt="" width="63" height="65">
+            </button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Problem -->
+    <section class="problem" id="problem" aria-labelledby="problem-title">
+      <div class="problem__stage">
+        <div class="problem__canvas">
+          <div class="section-head section-head--row problem__head">
+            <p class="section-head__label" lang="en">PROBLEM</p>
+            <div class="section-head__text">
+              <h2 class="section-head__title" id="problem-title">外国人材の教育、現場任せになっていませんか？</h2>
+              <p class="section-head__lead">採用後の日本語・介護教育・定着支援は、現場負担が大きく、属人化しやすい領域です。</p>
+            </div>
+          </div>
+          <picture class="problem__people">
+            <source type="image/avif" srcset="assets/img/problem-people-700.avif 700w, assets/img/problem-people.avif 1952w" sizes="(min-width: 1024px) 924px, (min-width: 768px) 600px, calc(100vw - 48px)"><source type="image/webp" srcset="assets/img/problem-people-700.webp 700w, assets/img/problem-people.webp 1952w" sizes="(min-width: 1024px) 924px, (min-width: 768px) 600px, calc(100vw - 48px)">
+            <img src="assets/img/problem-people.webp" alt="教育の課題について考える法人担当者たち" width="1952" height="806" loading="lazy" decoding="async">
+          </picture>
+          <ul class="problem__list">
+            <li class="problem-item problem-item--01">
+              <img class="problem-item__bubble" src="assets/img/problem-bubble-01.webp" alt="" width="700" height="700" loading="lazy" decoding="async">
+              <div class="problem-item__body">
+                <h3 class="problem-item__title">教育が現場任せに<br class="u-pc">なっている</h3>
+                <p class="problem-item__text">忙しい現場の職員が教育まで担い、担当者ごとに教える内容や<br class="u-pc">方法が異なる。</p>
+              </div>
+            </li>
+            <li class="problem-item problem-item--02">
+              <img class="problem-item__bubble" src="assets/img/problem-bubble-02.webp" alt="" width="700" height="700" loading="lazy" decoding="async">
+              <div class="problem-item__body">
+                <h3 class="problem-item__title">学習が本人任せに<br class="u-pc">なっている</h3>
+                <p class="problem-item__text">何を、いつ、どこまで学ぶかが<br class="u-pc">本人に委ねられ、継続的な学習につながりにくい。</p>
+              </div>
+            </li>
+            <li class="problem-item problem-item--03">
+              <img class="problem-item__bubble" src="assets/img/problem-bubble-03.webp" alt="" width="700" height="700" loading="lazy" decoding="async">
+              <div class="problem-item__body">
+                <h3 class="problem-item__title">学習進捗が見えない</h3>
+                <p class="problem-item__text">誰が何をどこまで学んだか把握できず、定着支援に活かしづらい。</p>
+              </div>
+            </li>
+            <li class="problem-item problem-item--04">
+              <img class="problem-item__bubble" src="assets/img/problem-bubble-04.webp" alt="" width="700" height="700" loading="lazy" decoding="async">
+              <div class="problem-item__body">
+                <h3 class="problem-item__title">入社後の育成が<br class="u-pc">続かない</h3>
+                <p class="problem-item__text">入社時の研修で終わり、その後の日本語・介護教育や<br class="u-pc">資格取得支援まで継続できない。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Solution -->
+    <section class="solution" id="solution" aria-labelledby="solution-title">
+      <div class="solution__stage">
+        <div class="solution__canvas">
+          <div class="section-head section-head--row section-head--white solution__head">
+            <p class="section-head__label" lang="en">SOLUTION</p>
+            <div class="section-head__text">
+              <h2 class="section-head__title" id="solution-title">日本<span class="ls-n192">語</span><span class="ls-n240">・</span>介護教<span class="ls-n208">育</span><span class="ls-n240">・</span>学習管理を<span class="ls-n752">、</span>ひとつの仕組みに。</h2>
+              <p class="section-head__lead">ASCareの教育プラットフォームは、学習者の学びやすさと、法人担当者の管理しやすさを両立します。</p>
+            </div>
+          </div>
+
+          <!-- PC：放射図（Figma 633:1148） -->
+          <div class="solution-diagram u-pc">
+            <picture class="solution-diagram__bg" aria-hidden="true">
+              <source type="image/avif" srcset="assets/img/solution-diagram.avif">
+              <img src="assets/img/solution-diagram.webp" alt="" width="2148" height="2079" loading="lazy" decoding="async">
+            </picture>
+            <!-- 概念図の演出（クライアント指示）：中央の波紋・中央から各項目へ流れる光・点線の輪を周回する光 -->
+            <div class="solution-fx" aria-hidden="true">
+              <span class="solution-fx__pulse"></span>
+              <span class="solution-fx__pulse solution-fx__pulse--2"></span>
+              <svg class="solution-fx__svg" viewBox="0 0 1041.485 954">
+                <defs><filter id="solution-glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <g filter="url(#solution-glow)">
+              <circle class="solution-fx__flow" r="5"><animateMotion dur="1.8s" begin="0.00s" repeatCount="indefinite" path="M518.8 334.0L518 227"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.8;1" dur="1.8s" begin="0.00s" repeatCount="indefinite"/></circle>
+              <circle class="solution-fx__flow" r="5"><animateMotion dur="1.8s" begin="0.35s" repeatCount="indefinite" path="M648.3 395.3L734 326"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.8;1" dur="1.8s" begin="0.35s" repeatCount="indefinite"/></circle>
+              <circle class="solution-fx__flow" r="5"><animateMotion dur="1.8s" begin="0.70s" repeatCount="indefinite" path="M681.7 532.0L794 555"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.8;1" dur="1.8s" begin="0.70s" repeatCount="indefinite"/></circle>
+              <circle class="solution-fx__flow" r="5"><animateMotion dur="1.8s" begin="1.05s" repeatCount="indefinite" path="M592.4 647.3L644 753"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.8;1" dur="1.8s" begin="1.05s" repeatCount="indefinite"/></circle>
+              <circle class="solution-fx__flow" r="5"><animateMotion dur="1.8s" begin="1.40s" repeatCount="indefinite" path="M443.5 645.2L387 753"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.8;1" dur="1.8s" begin="1.40s" repeatCount="indefinite"/></circle>
+              <circle class="solution-fx__flow" r="5"><animateMotion dur="1.8s" begin="1.75s" repeatCount="indefinite" path="M358.1 530.9L241 554"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.8;1" dur="1.8s" begin="1.75s" repeatCount="indefinite"/></circle>
+              <circle class="solution-fx__flow" r="5"><animateMotion dur="1.8s" begin="2.10s" repeatCount="indefinite" path="M391.3 395.8L303 325"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.8;1" dur="1.8s" begin="2.10s" repeatCount="indefinite"/></circle>
+                  <circle class="solution-fx__orbit" r="6"><animateMotion dur="14s" repeatCount="indefinite" path="M520 276a223 223 0 1 1 0 446a223 223 0 1 1 0-446"/></circle>
+                  <circle class="solution-fx__orbit" r="4"><animateMotion dur="14s" begin="-7s" repeatCount="indefinite" path="M520 276a223 223 0 1 1 0 446a223 223 0 1 1 0-446"/></circle>
+                </g>
+              </svg>
+            </div>
+            <div class="solution-diagram__center">
+              <img class="solution-diagram__logo" src="assets/logo/logo-white-solution.svg" alt="ASCare" width="198" height="42">
+              <p class="solution-diagram__name">教育プラットフォーム</p>
+              <p class="solution-diagram__en" lang="en">ASCare Education Platform</p>
+            </div>
+            <ul class="solution-diagram__list">
+              <li class="sol-node sol-node--care">
+                <img class="sol-node__icon" src="assets/icons/solution-care.svg" alt="" width="57" height="36">
+                <h3 class="sol-node__title">介護現場動画</h3>
+                <p class="sol-node__text">移乗・食事・排泄<br>入浴・認知症対応など</p>
+              </li>
+              <li class="sol-node sol-node--legal">
+                <img class="sol-node__icon" src="assets/icons/solution-video.svg" alt="" width="67" height="47">
+                <h3 class="sol-node__title">法定研修動画</h3>
+                <p class="sol-node__text">ミャンマー語<br>インドネシア語対応</p>
+              </li>
+              <li class="sol-node sol-node--app">
+                <img class="sol-node__icon" src="assets/icons/solution-study.svg" alt="" width="45" height="46">
+                <h3 class="sol-node__title">日本語学習アプリ＋<br>日本語テキスト</h3>
+                <p class="sol-node__text">継続的な<br>日本語学習を支援</p>
+              </li>
+              <li class="sol-node sol-node--manner">
+                <img class="sol-node__icon" src="assets/icons/solution-video.svg" alt="" width="71" height="50">
+                <h3 class="sol-node__title">生活マナー動画</h3>
+                <p class="sol-node__text">生活ルール<br>職場マナーを学習</p>
+              </li>
+              <li class="sol-node sol-node--online">
+                <img class="sol-node__icon" src="assets/icons/solution-online.svg" alt="" width="67" height="45">
+                <h3 class="sol-node__title">日本語<br><span class="ls-n096">オンラインレッスン</span></h3>
+                <p class="sol-node__text">週1回、テーマに<br>沿った研修</p>
+              </li>
+              <li class="sol-node sol-node--manage">
+                <img class="sol-node__icon" src="assets/icons/solution-chart.svg" alt="" width="45" height="42">
+                <h3 class="sol-node__title">学習管理</h3>
+                <p class="sol-node__text">学習状況の<br>確認・管理</p>
+              </li>
+              <li class="sol-node sol-node--exam">
+                <img class="sol-node__icon" src="assets/icons/solution-award.svg" alt="" width="30" height="42">
+                <h3 class="sol-node__title">介護福祉士<br>受験対策アプリ</h3>
+                <p class="sol-node__text">将来的な資格<br>取得を見据えた学習</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SP：カテゴリ別リスト（Figma 637:30677） -->
+          <div class="solution-list u-sp">
+            <div class="solution-list__group">
+              <h3 class="solution-list__cat">介護を学ぶ</h3>
+              <ul class="solution-list__items">
+                <li class="info-card info-card--icon"><p class="info-card__title">介護現場動画</p><p class="info-card__text">移乗・食事・排泄<br>入浴・認知症対応など</p><img class="info-card__icon sol-sp-icon--care" src="assets/icons/solution-care-sp.svg" alt="" width="69" height="42"></li>
+                <li class="info-card info-card--icon"><p class="info-card__title">法定研修動画</p><p class="info-card__text">ミャンマー語<br>インドネシア語対応</p><img class="info-card__icon sol-sp-icon--video" src="assets/icons/solution-video.svg" alt="" width="87" height="61"></li>
+              </ul>
+            </div>
+            <div class="solution-list__group">
+              <h3 class="solution-list__cat">日本語・暮らしを学ぶ</h3>
+              <ul class="solution-list__items">
+                <li class="info-card info-card--icon"><p class="info-card__title">日本語学習アプリ<br>＋日本語テキスト</p><p class="info-card__text">継続的な日本語学習を支援</p><img class="info-card__icon sol-sp-icon--study" src="assets/icons/solution-study-sp.svg" alt="" width="66" height="62"></li>
+                <li class="info-card info-card--icon"><p class="info-card__title">日本語<br>オンラインレッスン</p><p class="info-card__text">週1回、テーマに沿った研修</p><img class="info-card__icon sol-sp-icon--online" src="assets/icons/solution-online.svg" alt="" width="77" height="51"></li>
+                <li class="info-card info-card--icon"><p class="info-card__title">生活マナー動画</p><p class="info-card__text">生活ルール<br>職場マナーを学習</p><img class="info-card__icon sol-sp-icon--video" src="assets/icons/solution-video.svg" alt="" width="87" height="61"></li>
+              </ul>
+            </div>
+            <div class="solution-list__group">
+              <h3 class="solution-list__cat">学びを管理し、成長を支える</h3>
+              <ul class="solution-list__items">
+                <li class="info-card info-card--icon"><p class="info-card__title">学習管理</p><p class="info-card__text">学習状況の確認・管理</p><img class="info-card__icon sol-sp-icon--chart" src="assets/icons/solution-chart-sp.svg" alt="" width="45" height="42"></li>
+                <li class="info-card info-card--icon"><p class="info-card__title">介護福祉士<br>受験対策アプリ</p><p class="info-card__text">将来的な資格取得を見据えた学習</p><img class="info-card__icon sol-sp-icon--award" src="assets/icons/solution-award-sp.svg" alt="" width="42" height="58"></li>
+              </ul>
+            </div>
+          </div>
+
+          <picture class="solution__person" data-shiho="float">
+            <source type="image/avif" srcset="assets/img/solution-person-500.avif 500w, assets/img/solution-person.avif 774w" sizes="(min-width: 1024px) 387px, 246px"><source type="image/webp" srcset="assets/img/solution-person-500.webp 500w, assets/img/solution-person.webp 774w" sizes="(min-width: 1024px) 387px, 246px">
+            <img src="assets/img/solution-person.webp" alt="ノートパソコンを持ってガッツポーズをするアンバサダーのShihoさん" width="774" height="536" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Ambassador -->
+    <section class="ambassador" id="ambassador" aria-labelledby="ambassador-title">
+      <div class="ambassador__inner">
+        <div class="ambassador__card">
+          <h2 class="ambassador__title" id="ambassador-title">アンバサダーSHIHO</h2>
+          <div class="ambassador__text">
+            <p>SAKUSAKUの広報アンバサダーとして、日本語や日本の文化、日本での暮らしについて<br class="u-pc">発信していきます。趣味は着物、茶道、ゴルフ。</p>
+            <p>日本の文化が大好きなので、みなさんにも日本の面白さを<br class="u-pc">たくさん紹介していきたいと思っています。</p>
+            <p>日本語を勉強しているみなさんが、「もっと話したい！」「日本での生活が楽しくなった！」<br class="u-pc">と思えるように、一緒に日本語を楽しみましょう。</p>
+            <p class="ambassador__id" lang="id">Yuk, belajar bahasa Jepang <span class="ambassador__id-end">bersama! 🇯🇵✨</span></p>
+          </div>
+        </div>
+        <picture class="ambassador__person" data-shiho="float">
+          <source media="(max-width: 1023.98px)" type="image/avif" srcset="assets/img/ambassador-person-sp.avif">
+          <source media="(max-width: 1023.98px)" type="image/webp" srcset="assets/img/ambassador-person-sp.webp">
+          <source type="image/avif" srcset="assets/img/ambassador-person.avif">
+          <img src="assets/img/ambassador-person.webp" alt="日本語テキストを手に持つアンバサダーのShihoさん" width="488" height="608" loading="lazy" decoding="async">
+        </picture>
+        <div class="ambassador__logo" role="img" aria-label="SAKUSAKU NIHONGO　Halo! Saya Shiho">
+          <span class="ambassador__logo-main" aria-hidden="true">SAKUSAKU<br>&nbsp;NIHONGO</span>
+          <span class="ambassador__logo-sub" aria-hidden="true">Halo! Saya Shiho 👋</span>
+          <img class="ambassador__logo-line ambassador__logo-line--01" src="assets/illustrations/ambassador-line-01.svg" alt="" width="144" height="35">
+          <img class="ambassador__logo-line ambassador__logo-line--02" src="assets/illustrations/ambassador-line-02.svg" alt="" width="135" height="30">
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Value Chain -->
+    <section class="value-chain" id="value-chain" aria-labelledby="value-chain-title">
+      <div class="value-chain__stage">
+        <div class="value-chain__canvas">
+          <div class="section-head section-head--row value-chain__head">
+            <p class="section-head__label" lang="en">VALUE CHAIN</p>
+            <div class="section-head__text">
+              <h2 class="section-head__title" id="value-chain-title">採用後の教育から定着・資格取得支援まで。</h2>
+              <p class="section-head__lead">採用後に必要な教育プロセスを段階化し、法人担当者が管理しやすい形で提供します。</p>
+            </div>
+          </div>
+
+          <!-- PC：フェーズ帯＋6ステップ（Figma 633:1597） -->
+          <div class="vc-pc u-pc">
+            <ol class="vc-pc__phases" aria-label="支援フェーズ">
+              <li class="vc-pc__phase vc-pc__phase--01"><img src="assets/illustrations/valuechain-phase-01.svg" alt="" width="349" height="48"><span>採用後教育</span></li>
+              <li class="vc-pc__phase vc-pc__phase--02"><img src="assets/illustrations/valuechain-phase-02.svg" alt="" width="371" height="41"><span>学習管理</span></li>
+              <li class="vc-pc__phase vc-pc__phase--03"><img src="assets/illustrations/valuechain-phase-03.svg" alt="" width="371" height="41"><span>定着支援</span></li>
+            </ol>
+            <div class="vc-pc__frame">
+              <picture class="vc-pc__chevrons" aria-hidden="true">
+                <source type="image/avif" srcset="assets/img/valuechain-chevrons.avif">
+                <img src="assets/img/valuechain-chevrons.webp" alt="" width="1706" height="448" loading="lazy" decoding="async">
+              </picture>
+              <ol class="vc-pc__steps">
+                <li class="vc-step vc-step--1"><span class="vc-step__num">1</span><span class="vc-step__title">日本語基礎学習</span><span class="vc-step__sub">アプリ・音声対応</span></li>
+                <li class="vc-step vc-step--2"><span class="vc-step__num">2</span><span class="vc-step__title">介護現場で使う日本語</span><span class="vc-step__sub">専門用語・現場表現</span></li>
+                <li class="vc-step vc-step--3"><span class="vc-step__num">3</span><span class="vc-step__title">動画による介護知識学習</span><span class="vc-step__sub">オンデマンド視聴</span></li>
+                <li class="vc-step vc-step--4"><span class="vc-step__num">4</span><span class="vc-step__title">オンライン授業</span><span class="vc-step__sub">週1回・講師指導</span></li>
+                <li class="vc-step vc-step--5"><span class="vc-step__num">5</span><span class="vc-step__title">学習進捗管理</span><span class="vc-step__sub">週1回・講師指導</span></li>
+                <li class="vc-step vc-step--6"><span class="vc-step__num">6</span><span class="vc-step__title">資格取得<br>定着支援</span><span class="vc-step__sub">介護福祉士・在留資格</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- SP：フェーズカード（Figma 637:30898〜） -->
+          <ol class="vc-sp u-sp">
+            <li class="vc-sp__phase vc-sp__phase--01">
+              <h3 class="vc-sp__title">採用後教育</h3>
+              <ol class="vc-sp__steps">
+                <li class="vc-sp__step"><span class="vc-sp__num">1</span><span class="vc-sp__step-title">日本語基礎学習</span><span class="vc-sp__step-sub">アプリ・音声対応</span></li>
+                <li class="vc-sp__step"><span class="vc-sp__num">1</span><span class="vc-sp__step-title">介護現場で使う日本語</span><span class="vc-sp__step-sub">専門用語・現場表現</span></li>
+              </ol>
+            </li>
+            <li class="vc-sp__phase vc-sp__phase--02">
+              <h3 class="vc-sp__title">学習管理</h3>
+              <ol class="vc-sp__steps">
+                <li class="vc-sp__step"><span class="vc-sp__num">2</span><span class="vc-sp__step-title">動画による介護知識学習</span><span class="vc-sp__step-sub">オンデマンド視聴</span></li>
+                <li class="vc-sp__step"><span class="vc-sp__num">2</span><span class="vc-sp__step-title">オンライン授業</span><span class="vc-sp__step-sub">週1回・講師指導</span></li>
+              </ol>
+            </li>
+            <li class="vc-sp__phase vc-sp__phase--03">
+              <h3 class="vc-sp__title">定着支援</h3>
+              <ol class="vc-sp__steps">
+                <li class="vc-sp__step"><span class="vc-sp__num">3</span><span class="vc-sp__step-title">学習進捗管理</span><span class="vc-sp__step-sub">週1回・講師指導</span></li>
+                <li class="vc-sp__step"><span class="vc-sp__num">3</span><span class="vc-sp__step-title">資格取得・定着支援</span><span class="vc-sp__step-sub">介護福祉士・在留資格</span></li>
+              </ol>
+            </li>
+          </ol>
+
+          <p class="value-chain__summary">採用後教育 → 学習管理 → 定着支援の流れを、<br class="u-pc">ひとつのプラットフォームで一気通貫にサポートします。</p>
+          <picture class="value-chain__person" data-shiho="float">
+            <source media="(max-width: 1023.98px)" type="image/avif" srcset="assets/img/valuechain-person-sp.avif">
+            <source media="(max-width: 1023.98px)" type="image/webp" srcset="assets/img/valuechain-person-sp.webp">
+            <source type="image/avif" srcset="assets/img/valuechain-person.avif">
+            <img src="assets/img/valuechain-person.webp" alt="両手の人差し指を上に向けて笑顔のShihoさん" width="728" height="452" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Feature -->
+    <section class="feature" id="feature" aria-labelledby="feature-title">
+      <div class="container feature__inner">
+        <div class="section-head section-head--row section-head--center feature__head">
+          <p class="section-head__label" lang="en">FEATURE</p>
+          <div class="section-head__text">
+            <h2 class="section-head__title" id="feature-title">プラットフォームを構成する主なサービス</h2>
+          </div>
+        </div>
+        <ul class="feature__list">
+          <li class="feature-card feature-card--app">
+            <span class="feature-card__icon"><img class="u-pc" src="assets/icons/feature-app.svg" alt="" width="54" height="51"><img class="u-sp" src="assets/icons/feature-app-sp.svg" alt="" width="17" height="27"></span>
+            <h3 class="feature-card__title">日本語学習アプリ</h3>
+            <p class="feature-card__text">サクサク日本語と連動し、音声学習にも対応。すきま時間にスマホで学べる。</p>
+          </li>
+          <li class="feature-card feature-card--online">
+            <span class="feature-card__icon"><img class="u-pc" src="assets/icons/feature-online.svg" alt="" width="66" height="45"><img class="u-sp" src="assets/icons/feature-online-sp.svg" alt="" width="33" height="23"></span>
+            <h3 class="feature-card__title">オンラインレッスン</h3>
+            <p class="feature-card__text">講師による継続学習支援。グループ授業や法人単位の運用に対応予定。</p>
+          </li>
+          <li class="feature-card feature-card--video">
+            <span class="feature-card__icon"><img class="u-pc" src="assets/icons/feature-video.svg" alt="" width="60" height="43"><img class="u-sp" src="assets/icons/feature-video-sp.svg" alt="" width="29" height="24"></span>
+            <h3 class="feature-card__title">動画教材 / LMS</h3>
+            <p class="feature-card__text">介護技術・日本生活・制度理解などをオンデマンドで学習。</p>
+          </li>
+          <li class="feature-card feature-card--lms">
+            <span class="feature-card__icon"><img class="u-pc" src="assets/icons/feature-lms.svg" alt="" width="50" height="47"><img class="u-sp" src="assets/icons/feature-lms-sp.svg" alt="" width="27" height="26"></span>
+            <h3 class="feature-card__title">LMS / 学習管理</h3>
+            <p class="feature-card__text">法人担当者が学習状況や進捗を確認できる管理機能。</p>
+          </li>
+          <li class="feature-card feature-card--cert">
+            <span class="feature-card__icon"><img class="u-pc" src="assets/icons/feature-cert.svg" alt="" width="30" height="43"><img class="u-sp" src="assets/icons/feature-cert-sp.svg" alt="" width="27" height="39"></span>
+            <h3 class="feature-card__title">介護福祉士対策</h3>
+            <p class="feature-card__text">資格取得・在留資格「介護」への変更まで見据えた学習支援。</p>
+          </li>
+          <li class="feature-card feature-card--lang">
+            <span class="feature-card__icon"><img class="u-pc" src="assets/icons/feature-lang.svg" alt="" width="60" height="51"><img class="u-sp" src="assets/icons/feature-lang-sp.svg" alt="" width="32" height="32"></span>
+            <h3 class="feature-card__title">多言語展開</h3>
+            <p class="feature-card__text">インドネシア語に加え、ミャンマー・ベトナム版も展開</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 08 Benefit -->
+    <section class="benefit" id="benefit" aria-labelledby="benefit-title">
+      <div class="benefit__inner">
+        <div class="benefit__head">
+          <div class="section-head section-head--stack benefit__head-text">
+            <p class="section-head__label" lang="en">BENEFIT</p>
+            <div class="section-head__text">
+              <h2 class="section-head__title" id="benefit-title">法人導入で期待できること</h2>
+              <p class="section-head__lead">教育の標準化、現場負担の軽減、定着・成長支援までを見える化します。</p>
+            </div>
+          </div>
+          <picture class="benefit__people">
+            <source type="image/avif" srcset="assets/img/benefit-people.avif">
+            <img src="assets/img/benefit-people.webp" alt="ガッツポーズで喜ぶ法人担当者たち" width="870" height="568" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <ul class="benefit__list">
+          <li class="benefit-card benefit-card--01">
+            <picture class="benefit-card__photo"><source type="image/avif" srcset="assets/img/benefit-photo-01-440.avif 440w, assets/img/benefit-photo-01.avif 690w" sizes="(min-width: 1024px) 212px, (min-width: 768px) 600px, calc(100vw - 48px)"><source type="image/webp" srcset="assets/img/benefit-photo-01-440.webp 440w, assets/img/benefit-photo-01.webp 690w" sizes="(min-width: 1024px) 212px, (min-width: 768px) 600px, calc(100vw - 48px)"><img src="assets/img/benefit-photo-01.webp" alt="" width="690" height="460" loading="lazy" decoding="async"></picture>
+            <div class="benefit-card__body"><h3 class="benefit-card__title">教育の属人化を防ぐ</h3><p class="benefit-card__text">共通教材・カリキュラムにより、<br class="u-pc">施設や担当者ごとの教育差を抑えます。</p></div>
+          </li>
+          <li class="benefit-card benefit-card--02">
+            <picture class="benefit-card__photo"><source type="image/avif" srcset="assets/img/benefit-photo-02-440.avif 440w, assets/img/benefit-photo-02.avif 690w" sizes="(min-width: 1024px) 192px, (min-width: 768px) 600px, calc(100vw - 48px)"><source type="image/webp" srcset="assets/img/benefit-photo-02-440.webp 440w, assets/img/benefit-photo-02.webp 690w" sizes="(min-width: 1024px) 192px, (min-width: 768px) 600px, calc(100vw - 48px)"><img src="assets/img/benefit-photo-02.webp" alt="" width="690" height="518" loading="lazy" decoding="async"></picture>
+            <div class="benefit-card__body"><h3 class="benefit-card__title">現場教育の負担を軽減</h3><p class="benefit-card__text">基礎学習をオンライン化し、<br class="u-pc">現場は実践指導に集中しやすくします。</p></div>
+          </li>
+          <li class="benefit-card benefit-card--03">
+            <picture class="benefit-card__photo"><source type="image/avif" srcset="assets/img/benefit-photo-03-440.avif 440w, assets/img/benefit-photo-03.avif 690w" sizes="(min-width: 1024px) 212px, (min-width: 768px) 600px, calc(100vw - 48px)"><source type="image/webp" srcset="assets/img/benefit-photo-03-440.webp 440w, assets/img/benefit-photo-03.webp 690w" sizes="(min-width: 1024px) 212px, (min-width: 768px) 600px, calc(100vw - 48px)"><img src="assets/img/benefit-photo-03.webp" alt="" width="690" height="493" loading="lazy" decoding="async"></picture>
+            <div class="benefit-card__body"><h3 class="benefit-card__title">学習状況を見える化</h3><p class="benefit-card__text">進捗を把握し、個別フォローや配置・<br class="u-pc">育成判断に活かせます。</p></div>
+          </li>
+          <li class="benefit-card benefit-card--04">
+            <picture class="benefit-card__photo"><source type="image/avif" srcset="assets/img/benefit-photo-04-440.avif 440w, assets/img/benefit-photo-04.avif 690w" sizes="(min-width: 1024px) 202px, (min-width: 768px) 600px, calc(100vw - 48px)"><source type="image/webp" srcset="assets/img/benefit-photo-04-440.webp 440w, assets/img/benefit-photo-04.webp 690w" sizes="(min-width: 1024px) 202px, (min-width: 768px) 600px, calc(100vw - 48px)"><img src="assets/img/benefit-photo-04.webp" alt="" width="690" height="518" loading="lazy" decoding="async"></picture>
+            <div class="benefit-card__body"><h3 class="benefit-card__title">定着率向上に貢献</h3><p class="benefit-card__text">学習・資格取得・キャリア支援を継続し、<br class="u-pc">働き続けやすい環境をつくります。</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 09 Recommended ＋ 10 Photo strip -->
+    <section class="recommended" id="recommended" aria-labelledby="recommended-title">
+      <div class="container recommended__inner">
+        <div class="section-head section-head--row recommended__head">
+          <p class="section-head__label" lang="en">RECOMMENDED</p>
+          <div class="section-head__text">
+            <h2 class="section-head__title" id="recommended-title">こんな法人・事業者におすすめです</h2>
+          </div>
+        </div>
+        <ul class="recommended__list">
+          <li class="rec-card rec-card--01">
+            <svg class="rec-card__check" viewBox="0 0 49 49" width="49" height="49" aria-hidden="true"><circle class="rec-card__check-bg" cx="24.5" cy="24.5" r="24.5"/><path class="rec-card__check-mark" d="M16.3353 24.4995 21.439 29.6033 32.667 18.375" pathLength="1"/></svg>
+            <h3 class="rec-card__title">外国人介護人材を<br class="u-pc">受け入れている法人・施設</h3>
+            <p class="rec-card__text">進捗を把握し、個別フォローや<br class="u-pc">配置・育成判断に活かせます。</p>
+          </li>
+          <li class="rec-card rec-card--02">
+            <svg class="rec-card__check" viewBox="0 0 49 49" width="49" height="49" aria-hidden="true"><circle class="rec-card__check-bg" cx="24.5" cy="24.5" r="24.5"/><path class="rec-card__check-mark" d="M16.3353 24.4995 21.439 29.6033 32.667 18.375" pathLength="1"/></svg>
+            <h3 class="rec-card__title">外国人材の教育支援を<br class="u-pc">充実させたい登録支援機関</h3>
+            <p class="rec-card__text">支援先ごとに利用者IDを発行し、複数法人の外国人材教育をまとめて管理できます。</p>
+          </li>
+          <li class="rec-card rec-card--03">
+            <svg class="rec-card__check" viewBox="0 0 49 49" width="49" height="49" aria-hidden="true"><circle class="rec-card__check-bg" cx="24.5" cy="24.5" r="24.5"/><path class="rec-card__check-mark" d="M16.3353 24.4995 21.439 29.6033 32.667 18.375" pathLength="1"/></svg>
+            <h3 class="rec-card__title">紹介後の教育・定着支援まで<br class="u-pc">提供したい人材紹介事業者</h3>
+            <p class="rec-card__text">日本語教育と介護教育を組み合わせ、紹介後の育成支援までサービスを拡充できます。</p>
+          </li>
+        </ul>
+      </div>
+      <!-- 写真帯：自動で流れるループ式カルーセル（JS で複製してループ。ホバー・フォーカスで停止、ボタンで一時停止） -->
+      <div class="photo-strip" data-marquee>
+        <ul class="photo-strip__track" aria-label="介護現場の写真">
+          <li class="photo-strip__item"><picture><source type="image/avif" srcset="assets/img/strip-photo-01-380.avif 380w, assets/img/strip-photo-01.avif 760w" sizes="(min-width: 1024px) 380px, 166px"><source type="image/webp" srcset="assets/img/strip-photo-01-380.webp 380w, assets/img/strip-photo-01.webp 760w" sizes="(min-width: 1024px) 380px, 166px"><img src="assets/img/strip-photo-01.webp" alt="高齢者と笑顔で話す介護スタッフ" width="760" height="600" loading="lazy" decoding="async"></picture></li>
+          <li class="photo-strip__item"><picture><source type="image/avif" srcset="assets/img/strip-photo-02-380.avif 380w, assets/img/strip-photo-02.avif 760w" sizes="(min-width: 1024px) 380px, 166px"><source type="image/webp" srcset="assets/img/strip-photo-02-380.webp 380w, assets/img/strip-photo-02.webp 760w" sizes="(min-width: 1024px) 380px, 166px"><img src="assets/img/strip-photo-02.webp" alt="教室で講義を受ける外国人材" width="760" height="600" loading="lazy" decoding="async"></picture></li>
+          <li class="photo-strip__item"><picture><source type="image/avif" srcset="assets/img/strip-photo-03-380.avif 380w, assets/img/strip-photo-03.avif 760w" sizes="(min-width: 1024px) 380px, 166px"><source type="image/webp" srcset="assets/img/strip-photo-03-380.webp 380w, assets/img/strip-photo-03.webp 760w" sizes="(min-width: 1024px) 380px, 166px"><img src="assets/img/strip-photo-03.webp" alt="利用者をケアする介護スタッフ" width="760" height="600" loading="lazy" decoding="async"></picture></li>
+          <li class="photo-strip__item"><picture><source type="image/avif" srcset="assets/img/strip-photo-04-380.avif 380w, assets/img/strip-photo-04.avif 760w" sizes="(min-width: 1024px) 380px, 166px"><source type="image/webp" srcset="assets/img/strip-photo-04-380.webp 380w, assets/img/strip-photo-04.webp 760w" sizes="(min-width: 1024px) 380px, 166px"><img src="assets/img/strip-photo-04.webp" alt="利用者と向き合う介護スタッフ" width="760" height="600" loading="lazy" decoding="async"></picture></li>
+        </ul>
+        <button class="photo-strip__toggle" type="button" aria-pressed="false" aria-label="写真のスライドを一時停止" hidden>
+          <svg class="photo-strip__icon photo-strip__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+          <svg class="photo-strip__icon photo-strip__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- 11 Use Case -->
+    <section class="usecase" id="usecase" aria-labelledby="usecase-title">
+      <div class="container usecase__inner">
+        <div class="section-head section-head--row usecase__head">
+          <p class="section-head__label" lang="en">USE CASE</p>
+          <div class="section-head__text">
+            <h2 class="section-head__title" id="usecase-title">導入後の利用イメージ</h2>
+            <p class="section-head__lead">これまでのアナログな現場主導から、<br class="u-pc">システム化された理想的なフローへの変化を示します。</p>
+          </div>
+        </div>
+
+        <!-- 導入前／導入後 比較（Figma PC 633:1885。SP もクライアント指示でこのカードを縦に並べる） -->
+        <div class="usecase-compare">
+          <div class="usecase-compare__card usecase-compare__card--before">
+            <h3 class="usecase-compare__title">導入前</h3>
+            <p class="usecase-compare__pill">教育は現場任せ・本人任せ</p>
+            <ul class="usecase-compare__list">
+              <li><img src="assets/icons/cross.svg" alt="" width="24" height="24">日本語学習は本人任せ</li>
+              <li><img src="assets/icons/cross.svg" alt="" width="24" height="24">教育内容が部署・担当者ごとに異なる</li>
+              <li><img src="assets/icons/cross.svg" alt="" width="24" height="24">学習状況を法人が把握できない</li>
+              <li><img src="assets/icons/cross.svg" alt="" width="24" height="24">入社後の教育が継続しにくい</li>
+              <li><img src="assets/icons/cross.svg" alt="" width="24" height="24">資格取得まで支援できない</li>
+            </ul>
+          </div>
+          <img class="usecase-compare__arrow" src="assets/illustrations/usecase-arrow.svg" alt="" width="60" height="84">
+          <div class="usecase-compare__card usecase-compare__card--after">
+            <h3 class="usecase-compare__title">導入後</h3>
+            <p class="usecase-compare__pill">法人全体で育成する仕組み</p>
+            <ul class="usecase-compare__list">
+              <li><img src="assets/icons/check.svg" alt="" width="24" height="24">日本語・介護教育を一元管理</li>
+              <li><img src="assets/icons/check.svg" alt="" width="24" height="24">学習状況をリアルタイムで把握</li>
+              <li><img src="assets/icons/check.svg" alt="" width="24" height="24">教育内容を標準化</li>
+              <li><img src="assets/icons/check.svg" alt="" width="24" height="24">オンライン授業・動画で継続学習</li>
+              <li><img src="assets/icons/check.svg" alt="" width="24" height="24">資格取得・定着まで継続支援</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <picture class="usecase__person" data-shiho="wave">
+        <source type="image/avif" srcset="assets/img/usecase-person-360.avif 360w, assets/img/usecase-person.avif 654w" sizes="(min-width: 1024px) 327px, 180px"><source type="image/webp" srcset="assets/img/usecase-person-360.webp 360w, assets/img/usecase-person.webp 654w" sizes="(min-width: 1024px) 327px, 180px">
+        <img src="assets/img/usecase-person.webp" alt="両手でガッツポーズをするShihoさん" width="654" height="654" loading="lazy" decoding="async">
+      </picture>
+    </section>
+
+    <!-- 12 Price -->
+    <section class="price" id="price" aria-labelledby="price-title">
+      <div class="container price__inner">
+        <div class="section-head section-head--row section-head--center price__head">
+          <p class="section-head__label" lang="en">PRICE</p>
+          <div class="section-head__text">
+            <h2 class="section-head__title" id="price-title">料金・プラン</h2>
+            <p class="section-head__lead">法人規模・利用人数に応じた個別提案として設計します。</p>
+          </div>
+        </div>
+        <div class="price__box">
+          <div class="price__body">
+            <h3 class="price__title">法人規模・利用人数に応じて最適にプランをご提案します</h3>
+            <p class="price__text">利用人数、オンライン授業の有無、教材・LMS・動画教材の利用範囲に応じて、最適なプランをご提案します。<br class="u-pc">初期フェーズでは問い合わせ・商談にて詳細<span class="u-pc">を</span><span class="u-sp">な</span>お見積もり・ご案内いたします。</p>
+          </div>
+          <div class="price__cta">
+            <a class="btn btn--price" href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">
+              <span>料金について相談する</span>
+              <span class="icon-mask icon-mask--arrow btn__arrow btn__arrow--18 u-pc" aria-hidden="true"></span>
+              <svg class="u-sp" aria-hidden="true"><use href="#ms-arrow-forward"/></svg>
+            </a>
+            <p class="price__note">まずはお気軽にご相談ください</p>
+          </div>
+        </div>
+      </div>
+      <picture class="price__person" data-shiho="float">
+        <source type="image/avif" srcset="assets/img/price-person-310.avif 310w, assets/img/price-person.avif 578w" sizes="(min-width: 1024px) 289px, 155px"><source type="image/webp" srcset="assets/img/price-person-310.webp 310w, assets/img/price-person.webp 578w" sizes="(min-width: 1024px) 289px, 155px">
+        <img src="assets/img/price-person.webp" alt="料金相談を案内するShihoさん" width="578" height="578" loading="lazy" decoding="async">
+      </picture>
+    </section>
+
+    <!-- 13 Flow -->
+    <section class="flow" id="flow" aria-labelledby="flow-title">
+      <div class="flow__stage">
+        <div class="flow__canvas">
+          <div class="section-head section-head--row section-head--center section-head--white flow__head">
+            <p class="section-head__label section-head__label--plain" lang="en">FLOW</p>
+            <div class="section-head__text">
+              <h2 class="section-head__title" id="flow-title">導入までの流れ</h2>
+              <p class="section-head__lead">お問い合わせからご利用開始までのステップです。</p>
+            </div>
+          </div>
+
+          <!-- PC：円形ステップ（Figma 633:1995） -->
+          <div class="flow-pc u-pc">
+            <img class="flow-pc__bg" src="assets/illustrations/flow-steps.svg" alt="" width="1120" height="169">
+            <ol class="flow-pc__list">
+              <li class="flow-pc__step flow-pc__step--1"><span class="flow-pc__title">お問い合わせ</span><span class="flow-pc__desc">フォームより<br>ご連絡</span></li>
+              <li class="flow-pc__step flow-pc__step--2"><span class="flow-pc__title">ヒアリング</span><span class="flow-pc__desc">要件・人数の<br>ヒアリング</span></li>
+              <li class="flow-pc__step flow-pc__step--3"><span class="flow-pc__title">ご提案・<br>お見積り</span><span class="flow-pc__desc">最適プランの提示</span></li>
+              <li class="flow-pc__step flow-pc__step--4"><span class="flow-pc__title">アカウント発行</span><span class="flow-pc__desc">即日〜環境を<br>セットアップ</span></li>
+              <li class="flow-pc__step flow-pc__step--5"><span class="flow-pc__title">学習開始</span><span class="flow-pc__desc">スマホアプリ等で<br>学習スタート</span></li>
+              <li class="flow-pc__step flow-pc__step--6"><span class="flow-pc__title">進捗確認・<br>継続支援</span><span class="flow-pc__desc">管理画面と<br>講師でサポート</span></li>
+            </ol>
+          </div>
+
+          <!-- SP：番号リスト（Figma 637:31504） -->
+          <ol class="flow-sp u-sp">
+            <li class="flow-sp__step"><span class="flow-sp__num">01</span><div class="flow-sp__body"><h3 class="flow-sp__title">お問い合わせ</h3><p class="flow-sp__desc">フォームよりご連絡</p></div></li>
+            <li class="flow-sp__step"><span class="flow-sp__num">02</span><div class="flow-sp__body"><h3 class="flow-sp__title">ヒアリング</h3><p class="flow-sp__desc">要件・人数のヒアリング</p></div></li>
+            <li class="flow-sp__step"><span class="flow-sp__num">03</span><div class="flow-sp__body"><h3 class="flow-sp__title">ご提案・お見積り</h3><p class="flow-sp__desc">最適プランの提示</p></div></li>
+            <li class="flow-sp__step"><span class="flow-sp__num">04</span><div class="flow-sp__body"><h3 class="flow-sp__title">アカウント発行</h3><p class="flow-sp__desc">ID・環境をセットアップ</p></div></li>
+            <li class="flow-sp__step"><span class="flow-sp__num">05</span><div class="flow-sp__body"><h3 class="flow-sp__title">学習開始</h3><p class="flow-sp__desc">スマホアプリ等で学習スタート</p></div></li>
+            <li class="flow-sp__step"><span class="flow-sp__num">06</span><div class="flow-sp__body"><h3 class="flow-sp__title">進捗確認・継続支援</h3><p class="flow-sp__desc">管理画面と講師でサポート</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14 FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__inner">
+        <div class="section-head section-head--row section-head--center faq__head">
+          <p class="section-head__label" lang="en">FAQ</p>
+          <div class="section-head__text">
+            <h2 class="section-head__title" id="faq-title">よくあるご質問</h2>
+            <p class="section-head__lead">導入前の不安を事前に解消していただくことができます。</p>
+          </div>
+        </div>
+        <!-- TODO: 回答文は仮のダミー（【ダミーテキスト】表記）。正式な回答文の支給後に差し替える。FAQPage の JSON-LD も差し替え後に追加。 -->
+        <div class="faq__list" data-accordion>
+          <div class="accordion">
+            <h3 class="accordion__heading"><button class="accordion__button" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span class="accordion__q" aria-hidden="true">Q.</span><span class="accordion__question">何名から利用できますか？</span><span class="accordion__icon" aria-hidden="true"><img class="u-pc" src="assets/icons/plus.svg" alt="" width="30" height="30"><svg class="u-sp"><use href="#ms-expand-more"/></svg></span></button></h3>
+            <section class="accordion__panel" id="faq-a1" aria-labelledby="faq-q1" hidden><div class="accordion__answer" data-todo="answer"><p>【ダミーテキスト】1名からご利用いただけます。法人規模や受講者数に応じて最適なプランをご提案しますので、まずはお気軽にお問い合わせください。</p></div></section>
+          </div>
+          <div class="accordion">
+            <h3 class="accordion__heading"><button class="accordion__button" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span class="accordion__q" aria-hidden="true">Q.</span><span class="accordion__question">介護以外の業種にも対応していますか？</span><span class="accordion__icon" aria-hidden="true"><img class="u-pc" src="assets/icons/plus.svg" alt="" width="30" height="30"><svg class="u-sp"><use href="#ms-expand-more"/></svg></span></button></h3>
+            <section class="accordion__panel" id="faq-a2" aria-labelledby="faq-q2" hidden><div class="accordion__answer" data-todo="answer"><p>【ダミーテキスト】現在は介護分野向けの教材を中心に提供しています。その他の業種につきましては、教材の内容やご要望をお伺いしたうえで個別にご相談を承ります。</p></div></section>
+          </div>
+          <div class="accordion">
+            <h3 class="accordion__heading"><button class="accordion__button" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span class="accordion__q" aria-hidden="true">Q.</span><span class="accordion__question">スマホやタブレットで利用できますか？</span><span class="accordion__icon" aria-hidden="true"><img class="u-pc" src="assets/icons/plus.svg" alt="" width="30" height="30"><svg class="u-sp"><use href="#ms-expand-more"/></svg></span></button></h3>
+            <section class="accordion__panel" id="faq-a3" aria-labelledby="faq-q3" hidden><div class="accordion__answer" data-todo="answer"><p>【ダミーテキスト】はい、スマートフォン・タブレット・パソコンのいずれからでもご利用いただけます。アプリと動画教材は、すきま時間での学習にも対応しています。</p></div></section>
+          </div>
+          <div class="accordion">
+            <h3 class="accordion__heading"><button class="accordion__button" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span class="accordion__q" aria-hidden="true">Q.</span><span class="accordion__question">オンライン授業だけの利用はできますか？</span><span class="accordion__icon" aria-hidden="true"><img class="u-pc" src="assets/icons/plus.svg" alt="" width="30" height="30"><svg class="u-sp"><use href="#ms-expand-more"/></svg></span></button></h3>
+            <section class="accordion__panel" id="faq-a4" aria-labelledby="faq-q4" hidden><div class="accordion__answer" data-todo="answer"><p>【ダミーテキスト】オンライン授業のみのご利用も可能です。学習アプリや動画教材と組み合わせたプランもございますので、目的に合わせてお選びいただけます。</p></div></section>
+          </div>
+          <div class="accordion">
+            <h3 class="accordion__heading"><button class="accordion__button" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span class="accordion__q" aria-hidden="true">Q.</span><span class="accordion__question">管理画面では何が確認できますか？</span><span class="accordion__icon" aria-hidden="true"><img class="u-pc" src="assets/icons/plus.svg" alt="" width="30" height="30"><svg class="u-sp"><use href="#ms-expand-more"/></svg></span></button></h3>
+            <section class="accordion__panel" id="faq-a5" aria-labelledby="faq-q5" hidden><div class="accordion__answer" data-todo="answer"><p>【ダミーテキスト】受講者ごとの学習時間、教材の進捗、テストの結果などを確認できます。法人ご担当者様が、複数の受講者の状況をまとめて把握できる画面をご用意しています。</p></div></section>
+          </div>
+          <div class="accordion">
+            <h3 class="accordion__heading"><button class="accordion__button" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span class="accordion__q" aria-hidden="true">Q.</span><span class="accordion__question">請求書払いはできますか？</span><span class="accordion__icon" aria-hidden="true"><img class="u-pc" src="assets/icons/plus.svg" alt="" width="30" height="30"><svg class="u-sp"><use href="#ms-expand-more"/></svg></span></button></h3>
+            <section class="accordion__panel" id="faq-a6" aria-labelledby="faq-q6" hidden><div class="accordion__answer" data-todo="answer"><p>【ダミーテキスト】はい、法人のお客様は請求書払いに対応しています。お支払い方法の詳細は、お見積りの際にご案内いたします。</p></div></section>
+          </div>
+          <div class="accordion">
+            <h3 class="accordion__heading"><button class="accordion__button" type="button" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span class="accordion__q" aria-hidden="true">Q.</span><span class="accordion__question">無料体験や教材サンプルはありますか？</span><span class="accordion__icon" aria-hidden="true"><img class="u-pc" src="assets/icons/plus.svg" alt="" width="30" height="30"><svg class="u-sp"><use href="#ms-expand-more"/></svg></span></button></h3>
+            <section class="accordion__panel" id="faq-a7" aria-labelledby="faq-q7" hidden><div class="accordion__answer" data-todo="answer"><p>【ダミーテキスト】教材のサンプルや一部機能をお試しいただける体験をご用意しています。ご希望の際はお問い合わせフォームよりお申し込みください。</p></div></section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 Final CTA -->
+    <section class="cta" id="contact" aria-labelledby="cta-title">
+      <div class="cta__inner">
+        <h2 class="cta__title" id="cta-title">外国人材教育の仕組みづくりを、まずはご相談ください。</h2>
+        <p class="cta__lead">サービス資料、導入相談、教材サンプルの確認など、法人様の課題に合わせてご案内します。</p>
+        <div class="cta__row">
+          <ul class="cta__badges">
+            <li class="cta__badge"><span>導入実績<span class="cta__num">50</span>社以上</span></li>
+            <li class="cta__badge cta__badge--free">無料相談受付中</li>
+          </ul>
+          <div class="cta__buttons">
+            <a class="btn btn--cta-primary" href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">
+              <span class="icon-mask icon-mask--doc u-pc" aria-hidden="true"></span>
+              <span>お問い合わせ</span>
+              <span class="icon-mask icon-mask--arrow btn__arrow u-pc" aria-hidden="true"></span>
+              <svg class="u-sp" aria-hidden="true"><use href="#ms-arrow-forward"/></svg>
+            </a>
+            <a class="btn btn--cta-secondary" href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">法人導入について相談する</a>
+          </div>
+          <div class="cta__person" aria-hidden="true" data-shiho="wave">
+            <picture>
+              <source type="image/avif" srcset="assets/img/cta-person-220.avif 220w, assets/img/cta-person.avif 628w" sizes="(min-width: 1024px) 314px, 106px"><source type="image/webp" srcset="assets/img/cta-person-220.webp 220w, assets/img/cta-person.webp 628w" sizes="(min-width: 1024px) 314px, 106px">
+              <img src="assets/img/cta-person.webp" alt="" width="628" height="1116" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 動画モーダル（クリックで開き、YouTube を読み込む。閉じると停止） -->
+  <dialog class="video-modal" id="video-modal" aria-label="アンバサダー紹介動画">
+    <div class="video-modal__panel">
+      <button class="video-modal__close" type="button" aria-label="動画を閉じる">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M2 2 54 54M54 2 2 54"/></svg>
+      </button>
+      <div class="video-modal__frame"></div>
+    </div>
+  </dialog>
+
+  <!-- 16 Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <a class="site-footer__logo" href="#top"><img src="assets/logo/logo-white.svg" alt="ASCare トップページ" width="152" height="32"></a>
+        <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+          <ul>
+            <li><a href="#problem">課題</a></li>
+            <li><a href="#solution">サービス概要</a></li>
+            <li><a href="#feature">機能</a></li>
+            <li><a href="#benefit">導入メリット</a></li>
+            <li><a href="#flow">導入フロー</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://www.as-care.co.jp/gaikokujinzai/contact/" target="_blank" rel="noopener">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <ul class="site-footer__legal">
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+          <li><a href="https://www.as-care.co.jp/" target="_blank" rel="noopener">運営会社<img class="icon-external" src="assets/icons/external.svg" alt="（外部サイト）" width="10" height="10"></a></li>
+        </ul>
+        <p class="site-footer__copy"><small lang="en">© ASCare Learning. All rights reserved.</small></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

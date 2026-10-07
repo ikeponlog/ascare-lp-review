@@ -1,0 +1,62 @@
+<svg width="66" height="45" viewBox="0 0 66 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ascare">
+<g id="Main">
+<g id="Section - FEATURE">
+<g id="Container">
+<g id="Container_2">
+<g id="Article" filter="url(#filter0_d_633_2)">
+<g id="Container_3">
+<g id="_&#227;&#131;&#172;&#227;&#130;&#164;&#227;&#131;&#164;&#227;&#131;&#188;_1" clip-path="url(#clip0_633_2)">
+<g id="Group">
+<g id="Group_2">
+<path id="Vector" d="M49.0195 7.04736H59.2803" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M49.0195 11.1016H56.0173" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_3" d="M65.3885 13.6082V4.53953C65.3885 2.3786 63.652 0.620605 61.5176 0.620605H46.0391C43.9074 0.620605 42.1709 2.3786 42.1709 4.53953V13.6096C42.1709 15.7706 43.9074 17.5286 46.0391 17.5286H47.6311L46.7288 20.4429C46.662 20.6637 46.7411 20.9024 46.9278 21.0335C47.0178 21.0997 47.1227 21.1315 47.2291 21.1315C47.3354 21.1315 47.4512 21.0956 47.5425 21.0238L52.1182 17.5286H61.5162C63.6507 17.5286 65.3872 15.7706 65.3872 13.6096L65.3885 13.6082Z" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group_3">
+<g id="Group_4">
+<g id="Group_5">
+<path id="Vector_4" d="M55.854 20.9106V37.032" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M9.53076 37.0324V8.29869C9.53076 7.08437 10.504 6.09912 11.7034 6.09912L38.8588 6.15294" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M9.53076 10.7231H38.8588" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group_6">
+<path id="Vector_7" d="M62.528 44.3793H2.85652L0.615723 39.6104H64.7688L62.528 44.3793Z" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M29.6855 41.9946H35.6978" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="Group_7">
+<g id="Group_8">
+<path id="Vector_9" d="M24.7715 33.3958V28.1094C24.7715 25.5083 26.8542 23.3984 29.4248 23.3984H35.9687C38.538 23.3984 40.622 25.5069 40.622 28.1094V33.3958" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_10" d="M34.126 21.3978C36.0323 20.5984 36.9375 18.3859 36.1479 16.456C35.3583 14.5261 33.1729 13.6096 31.2666 14.409C29.3603 15.2084 28.455 17.4209 29.2447 19.3508C30.0343 21.2808 32.2197 22.1972 34.126 21.3978Z" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_11" d="M27.5996 33.3967V31.7188" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_12" d="M37.604 33.3967V31.7188" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_13" d="M50.2816 33.4248H15.1007C14.5821 33.4248 14.1616 33.8505 14.1616 34.3756V35.3084C14.1616 35.8335 14.5821 36.2591 15.1007 36.2591H50.2816C50.8002 36.2591 51.2207 35.8335 51.2207 35.3084V34.3756C51.2207 33.8505 50.8002 33.4248 50.2816 33.4248Z" stroke="#76C234" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_633_2" x="-152.5" y="-32.5" width="371" height="221" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0901961 0 0 0 0 0.168627 0 0 0 0 0.207843 0 0 0 0.06 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_633_2"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_633_2" result="shape"/>
+</filter>
+<clipPath id="clip0_633_2">
+<rect width="66" height="45" fill="white"/>
+</clipPath>
+</defs>
+</svg>
