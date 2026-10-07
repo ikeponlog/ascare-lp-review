@@ -13,7 +13,7 @@ function initMenu() {
   let closeTimer;
 
   // メニュー展開中は背後の本文・フッターを操作対象から外す（キーボード／支援技術）
-  const background = document.querySelectorAll('main, .site-footer, .skip-link');
+  const background = document.querySelectorAll('main, .site-footer, .skip-link, .to-top');
 
   const setState = (open) => {
     toggle.setAttribute('aria-expanded', String(open));
@@ -29,7 +29,8 @@ function initMenu() {
     // hidden 解除後に次フレームで opacity を上げる
     requestAnimationFrame(() => menu.classList.add('is-open'));
     setState(true);
-    menu.querySelector('a')?.focus({ preventScroll: true });
+    // メニュー全体にフォーカス（iPhone で先頭リンクにフォーカス枠が出ないように）。Tab で先頭リンクへ進める
+    menu.focus({ preventScroll: true });
   };
 
   const close = ({ focusToggle = false } = {}) => {
@@ -296,7 +297,36 @@ function initMotion() {
   document.querySelectorAll('[data-shiho], .solution-diagram, .vc-pc, .vc-sp, .flow-pc').forEach((el) => observer.observe(el));
 }
 
+// --- to-top.js
+// トップへ戻る：600px 以上スクロールしたら表示。クリックで先頭へ戻る（キーボード操作時はフォーカスもロゴへ）。
+const THRESHOLD = 600;
+
+function initToTop() {
+  const button = document.querySelector('.to-top');
+  if (!button) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let ticking = false;
+
+  const update = () => {
+    button.classList.toggle('is-visible', window.scrollY > THRESHOLD);
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  update();
+
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    // キーボードで押したときだけフォーカスを先頭へ（タップ時に iPhone でフォーカス枠が出ないように）
+    if (event.detail === 0) document.querySelector('.site-header__logo')?.focus({ preventScroll: true });
+    else button.blur();
+  });
+}
+
 // ASCare LP — エントリ。機能ごとの ES モジュールを初期化する。
+
 
 
 
@@ -310,4 +340,5 @@ initVideo();
 initReveal();
 initMarquee();
 initMotion();
+initToTop();
 })();
