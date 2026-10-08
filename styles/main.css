@@ -1222,7 +1222,7 @@ color: var(--color-white);
 display: flex;
 flex-direction: column;
 gap: 28px;
-padding: var(--space-10) var(--pad-sp) var(--space-8);
+padding: var(--space-10) var(--pad-sp) var(--space-20);
 }
 .site-footer__top {
 display: flex;
@@ -1287,6 +1287,7 @@ font-weight: var(--fw-regular);
 font-size: 11px;
 line-height: 1.8;
 color: var(--color-white-60);
+text-align: right;
 }
 .site-footer a:hover {
 color: var(--color-white);
@@ -1362,20 +1363,12 @@ display: none;
 }
 .hero__photos {
 position: absolute;
-top: 214px;
+top: 196px;
 right: 0;
-width: min(56%, 360px);
-aspect-ratio: 1308 / 1222;
-max-height: 136px; 
+width: min(66%, 400px);
+height: 150px; 
 overflow: hidden;
 pointer-events: none;
-}
-@media (min-width: 600px) and (max-width: 1023.98px) {
-.hero__photos {
-top: calc(var(--header-h-sp) + var(--space-6));
-width: 46%;
-max-height: 270px;
-}
 }
 .hero__photo {
 position: absolute;
@@ -1386,13 +1379,32 @@ height: 100%;
 max-width: none;
 }
 .hero__photo--01 {
-display: none;
+left: 4%;
+top: 0;
+width: 62%;
+aspect-ratio: 1323 / 1254;
 }
 .hero__photo--02 {
-left: 0;
-top: 0;
-width: 112%;
+left: 44%;
+top: 22px;
+width: 70%;
 aspect-ratio: 1308 / 1222;
+}
+@media (min-width: 600px) and (max-width: 1023.98px) {
+.hero__photos {
+top: calc(var(--header-h-sp) + var(--space-6));
+width: 52%;
+height: 290px;
+}
+.hero__photo--01 {
+left: 0;
+width: 60%;
+}
+.hero__photo--02 {
+left: 40%;
+top: 15%;
+width: 64%;
+}
 }
 .hero__overlay {
 position: absolute;
@@ -1759,6 +1771,37 @@ margin: 0;
 .hero__video-play {
 width: calc(var(--u) * 63);
 height: calc(var(--u) * 65.377);
+}
+}
+@media (min-width: 720px) and (max-width: 1023.98px) {
+.hero__media {
+display: grid;
+grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+align-items: center;
+gap: var(--space-6);
+padding: var(--space-10) var(--space-6);
+}
+.hero__video {
+order: -1;
+width: 100%;
+height: auto;
+aspect-ratio: 862 / 578;
+margin: 0;
+}
+.hero__ambassador {
+height: auto;
+aspect-ratio: 862 / 578;
+align-items: flex-end;
+}
+.hero__ribbon {
+left: 0;
+top: auto;
+bottom: 32%;
+}
+.hero__ambassador-img {
+width: auto;
+height: 92%;
+aspect-ratio: 144 / 180;
 }
 }
 }
