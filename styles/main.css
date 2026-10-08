@@ -1364,9 +1364,10 @@ display: none;
 .hero__photos {
 position: absolute;
 top: 196px;
-right: 0;
-width: min(66%, 400px);
-height: 150px; 
+right: -12%; 
+width: min(76%, 420px);
+aspect-ratio: 1102.6 / 628.5;
+max-height: 154px; 
 overflow: hidden;
 pointer-events: none;
 }
@@ -1379,31 +1380,23 @@ height: 100%;
 max-width: none;
 }
 .hero__photo--01 {
-left: 4%;
+left: 0;
 top: 0;
-width: 62%;
+width: 60%;
 aspect-ratio: 1323 / 1254;
 }
 .hero__photo--02 {
-left: 44%;
-top: 22px;
-width: 70%;
+left: 40.69%;
+top: 2.78%;
+width: 59.31%;
 aspect-ratio: 1308 / 1222;
 }
-@media (min-width: 600px) and (max-width: 1023.98px) {
+@media (min-width: 700px) and (max-width: 1023.98px) {
 .hero__photos {
 top: calc(var(--header-h-sp) + var(--space-6));
-width: 52%;
-height: 290px;
-}
-.hero__photo--01 {
-left: 0;
-width: 60%;
-}
-.hero__photo--02 {
-left: 40%;
-top: 15%;
-width: 64%;
+right: 0;
+width: 56%;
+max-height: none;
 }
 }
 .hero__overlay {
