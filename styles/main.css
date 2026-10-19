@@ -133,6 +133,9 @@ linear-gradient(-78.6deg, rgba(252, 250, 246, 0) 17.866%, rgba(252, 250, 246, 0.
 --gradient-hero-overlay-sp:
 linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.85) 12%, rgba(255, 255, 255, 0) 40%),
 linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 42%);
+--gradient-hero-glow:
+radial-gradient(closest-side, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0)) 46% 22% / 46% 50% no-repeat,
+radial-gradient(closest-side, rgba(226, 250, 196, 0.45), rgba(226, 250, 196, 0)) 90% 72% / 40% 52% no-repeat;
 --text-glow-white: 0 0 2px #ffffff, 0 0 6px #ffffff, 0 0 12px rgba(255, 255, 255, 0.9);
 --gradient-benefit-head: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
 --font-heading: "Zen Kaku Gothic New", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, sans-serif;
@@ -216,6 +219,7 @@ linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.8) 14%, rgba(255, 25
 --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 --dur-reveal: 750ms; 
 --dur-ui: 200ms;
+--dur-underline: 350ms; 
 }
 }
 @layer base {
@@ -814,6 +818,22 @@ inset: -2px -7px;
 .site-header__nav-list a:hover {
 color: var(--color-turquoise);
 }
+.site-header__nav-list a::before {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+bottom: var(--space-1);
+height: 1px;
+background: currentColor;
+transform: scaleX(0);
+transform-origin: left center;
+transition: transform var(--dur-underline) var(--ease-out);
+}
+.site-header__nav-list a:hover::before,
+.site-header__nav-list a:focus-visible::before {
+transform: scaleX(1);
+}
 .btn--header {
 display: inline-flex;
 margin-left: 42px;
@@ -1293,6 +1313,22 @@ text-align: right;
 .site-footer a:hover {
 color: var(--color-white);
 }
+.site-footer__nav a::before {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+bottom: -3px;
+height: 1px;
+background: currentColor;
+transform: scaleX(0);
+transform-origin: left center;
+transition: transform var(--dur-underline) var(--ease-out);
+}
+.site-footer__nav a:hover::before,
+.site-footer__nav a:focus-visible::before {
+transform: scaleX(1);
+}
 @media (min-width: 1024px) {
 .site-footer__inner {
 gap: 48px;
@@ -1539,17 +1575,17 @@ max-width: none;
 }
 .hero__ambassador-img {
 --hand: 19.5% 24.2%, 22.5% 20.8%, 25% 19.4%, 30% 19.6%, 34.2% 23.6%, 36.2% 27.2%, 38% 27.4%, 43% 26.6%,
-45.2% 27.4%, 44.6% 28.4%, 40.5% 29.6%, 37% 31.5%, 34% 34%, 26% 34%, 24.5% 30%, 19.5% 25.7%;
+45.2% 27.4%, 44.6% 28.4%, 40.5% 29.6%, 37% 31.5%, 35% 32.3%, 33.2% 35%, 31% 38%, 30.2% 41%, 29.6% 45%,
+29% 49%, 27% 51.2%, 22.5% 52.6%, 17.5% 51%, 16.3% 47.5%, 16.8% 44.5%, 19.8% 40%, 23% 35.3%, 24.8% 32.5%,
+23.5% 30%, 18.5% 25.7%;
 --hand-start: 19.5% 24.2%;
---hand-layer: 19.5% 24.2%, 22.5% 20.8%, 25% 19.4%, 30% 19.6%, 34.2% 23.6%, 36.2% 27.2%, 38% 27.4%, 43% 26.6%,
-45.2% 27.4%, 44.6% 28.4%, 40.5% 29.6%, 37% 31.5%, 33.5% 34%, 32.5% 36.8%, 26.5% 36.8%, 26% 34%, 24.5% 30%, 19.5% 25.7%;
---hand-pivot: 29.5% 33.5%; 
+--hand-pivot: 21.5% 48.5%; 
 }
 .hero__ambassador-body img {
 clip-path: polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0, var(--hand), var(--hand-start), 0 0);
 }
 .hero__ambassador-hand img {
-clip-path: polygon(var(--hand-layer));
+clip-path: polygon(var(--hand));
 transform-origin: var(--hand-pivot);
 }
 .hero__video {
@@ -1557,7 +1593,7 @@ position: relative;
 width: min(338px, 100%);
 height: auto;
 aspect-ratio: 338 / 198;
-margin: var(--space-3) auto 0;
+margin: 0 auto;
 }
 .hero__video-button,
 .hero__video iframe {
@@ -1774,11 +1810,11 @@ height: 100%;
 }
 .hero__ambassador-img {
 --hand: 19.5% 27.5%, 23% 21%, 29% 20.5%, 34% 22.5%, 36.5% 31%, 38% 32.8%, 42% 31.5%, 44.9% 32%,
-44.7% 33.4%, 41% 35.3%, 37.5% 37%, 34.5% 39.8%, 32% 42%, 25% 42%, 24.5% 37%, 19.5% 31.5%;
+44.7% 33.4%, 41% 35.3%, 37.5% 37%, 34.5% 39.8%, 33.2% 42%, 31.2% 46%, 30% 50%, 29% 55%, 28.4% 60%,
+27.8% 65%, 26.5% 67.5%, 22.5% 69%, 17.5% 67%, 16% 62%, 16.5% 57%, 19% 52%, 22.5% 47%, 24.3% 42%,
+23% 37%, 18.5% 31.5%;
 --hand-start: 19.5% 27.5%;
---hand-layer: 19.5% 27.5%, 23% 21%, 29% 20.5%, 34% 22.5%, 36.5% 31%, 38% 32.8%, 42% 31.5%, 44.9% 32%,
-44.7% 33.4%, 41% 35.3%, 37.5% 37%, 34.5% 39.8%, 33% 41.5%, 31.5% 45.5%, 25.5% 45.5%, 25% 42%, 24.5% 37%, 19.5% 31.5%;
---hand-pivot: 28.5% 41.5%;
+--hand-pivot: 22.5% 64%; 
 }
 .hero__video {
 position: absolute;
@@ -4631,12 +4667,11 @@ shiho-sway 2.86s ease-in-out 1050ms 2;
 animation: shiho-in 1050ms var(--ease-out) both;
 }
 .js-motion .hero__ambassador-img[data-shiho].is-in .hero__ambassador-hand img {
-animation: hand-wave 1.8s ease-in-out 1050ms infinite;
+animation: hand-wave 1.6s ease-in-out 1050ms infinite;
 }
 @keyframes hand-wave {
 0%, 100% { rotate: 0deg; }
-25% { rotate: -7deg; }
-75% { rotate: 7deg; }
+50% { rotate: 8deg; }
 }
 @media (min-width: 1024px) {
 .js-motion .hero__ambassador-img[data-shiho].is-in {
@@ -4649,8 +4684,49 @@ animation: shiho-in 1050ms var(--ease-out) both;
 .js-motion .hero__ambassador-img[data-shiho].is-in .hero__ambassador-hand img {
 animation:
 shiho-in 1050ms var(--ease-out) both,
-hand-wave 1.8s ease-in-out 1050ms infinite;
+hand-wave 1.6s ease-in-out 1050ms infinite;
 }
+}
+.js-motion .hero__wave,
+.js-motion .hero__body::before {
+margin-inline: -4%;
+transform-origin: 50% 100%;
+animation: hero-wave-drift 16s ease-in-out infinite;
+will-change: transform;
+}
+.js-motion .hero__body::before {
+inset-inline: -4%;
+margin-inline: 0;
+}
+.js-motion .hero__wave::after,
+.js-motion .hero__body::after {
+content: "";
+position: absolute;
+inset: 0;
+background: var(--gradient-hero-glow);
+animation: hero-glow-drift 22s ease-in-out infinite;
+pointer-events: none;
+}
+.js-motion .hero__body::after {
+z-index: -1;
+inset: -24px 0 auto;
+height: 285px;
+}
+@media (min-width: 1024px) {
+.js-motion .hero__body::after {
+content: none;
+}
+}
+@keyframes hero-wave-drift {
+0%, 100% { transform: translateX(0) scale(1, 1); }
+30% { transform: translateX(-1.6%) scale(1.01, 1.05); }
+55% { transform: translateX(0.8%) scale(1, 0.97); }
+80% { transform: translateX(1.8%) scale(1.01, 1.03); }
+}
+@keyframes hero-glow-drift {
+0%, 100% { transform: translate(0, 0); opacity: 0.7; }
+35% { transform: translate(6%, -5%); opacity: 1; }
+70% { transform: translate(-5%, 3%); opacity: 0.8; }
 }
 @media (max-width: 1023.98px) {
 .js-motion .cta__person[data-shiho].is-in {
@@ -5008,14 +5084,22 @@ display: none;
 @media (prefers-reduced-motion: no-preference) {
 .js-reveal {
 opacity: 0;
-translate: 0 16px;
+translate: 0 var(--reveal-y, 16px);
 transition:
-opacity var(--reveal-duration, var(--dur-reveal)) var(--ease-out) var(--reveal-delay, 0ms),
-translate var(--reveal-duration, var(--dur-reveal)) var(--ease-out) var(--reveal-delay, 0ms);
+opacity var(--reveal-duration, var(--dur-reveal)) var(--reveal-ease, var(--ease-out)) var(--reveal-delay, 0ms),
+translate var(--reveal-duration, var(--dur-reveal)) var(--reveal-ease, var(--ease-out)) var(--reveal-delay, 0ms);
 }
 .js-reveal.is-revealed {
 opacity: 1;
 translate: 0 0;
+}
+}
+}
+@layer utilities {
+@media (prefers-reduced-motion: reduce) {
+.site-header__nav-list a::before,
+.site-footer__nav a::before {
+transition: none;
 }
 }
 }

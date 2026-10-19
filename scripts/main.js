@@ -184,8 +184,14 @@ const TARGETS = [
   '.info-card',
 ];
 
-// Problem の吹き出し：クライアント指示で、左から 1 つずつ時間差で下からフェードアップ
-const BUBBLE_STAGGER = 700; // ms（1 つずつ出るのが分かる間隔）
+// Problem の吹き出し：クライアント指示で、左から 1 つずつゆっくりフェードイン（位置は動かさない）
+const BUBBLE_STAGGER = 1100; // ms（前の吹き出しがほぼ出きってから次が出る間隔）
+const BUBBLE_DURATION = '1500ms';
+
+// Feature / Benefit のカード：クライアント指示で通常より少しゆっくり
+const SLOW_CARDS = '.feature-card, .benefit-card';
+const SLOW_STAGGER = 180; // ms
+const SLOW_DURATION = '1100ms';
 
 function initReveal() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -201,10 +207,12 @@ function initReveal() {
   }, { rootMargin: '0px 0px -10% 0px' });
 
   document.querySelectorAll(TARGETS.join(',')).forEach((el) => {
-    // 同じ親の中での順番で stagger（90ms）
+    // 同じ親の中での順番で stagger（90ms。Feature / Benefit のカードは 180ms・1100ms）
     const siblings = Array.from(el.parentElement?.children ?? []);
     const index = Math.max(0, siblings.indexOf(el));
-    el.style.setProperty('--reveal-delay', `${Math.min(index, 6) * 90}ms`);
+    const slow = el.matches(SLOW_CARDS);
+    el.style.setProperty('--reveal-delay', `${Math.min(index, 6) * (slow ? SLOW_STAGGER : 90)}ms`);
+    if (slow) el.style.setProperty('--reveal-duration', SLOW_DURATION);
     el.classList.add('js-reveal');
     observer.observe(el);
   });
@@ -218,7 +226,9 @@ function initReveal() {
       const parts = isPc ? Array.from(item.children) : [item];
       parts.forEach((el) => {
         el.style.setProperty('--reveal-delay', `${index * BUBBLE_STAGGER}ms`);
-        el.style.setProperty('--reveal-duration', '1200ms');
+        el.style.setProperty('--reveal-duration', BUBBLE_DURATION);
+        el.style.setProperty('--reveal-y', '0px');
+        el.style.setProperty('--reveal-ease', 'ease-in-out');
         el.classList.add('js-reveal');
         targets.push(el);
       });
