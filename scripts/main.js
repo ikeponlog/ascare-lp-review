@@ -185,7 +185,7 @@ const TARGETS = [
 ];
 
 // Problem の吹き出し：クライアント指示で、左から 1 つずつ時間差で下からフェードアップ
-const BUBBLE_STAGGER = 450; // ms（1 つずつ出るのが分かる間隔）
+const BUBBLE_STAGGER = 700; // ms（1 つずつ出るのが分かる間隔）
 
 function initReveal() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -201,10 +201,10 @@ function initReveal() {
   }, { rootMargin: '0px 0px -10% 0px' });
 
   document.querySelectorAll(TARGETS.join(',')).forEach((el) => {
-    // 同じ親の中での順番で stagger（60ms）
+    // 同じ親の中での順番で stagger（90ms）
     const siblings = Array.from(el.parentElement?.children ?? []);
     const index = Math.max(0, siblings.indexOf(el));
-    el.style.setProperty('--reveal-delay', `${Math.min(index, 6) * 60}ms`);
+    el.style.setProperty('--reveal-delay', `${Math.min(index, 6) * 90}ms`);
     el.classList.add('js-reveal');
     observer.observe(el);
   });
@@ -218,7 +218,7 @@ function initReveal() {
       const parts = isPc ? Array.from(item.children) : [item];
       parts.forEach((el) => {
         el.style.setProperty('--reveal-delay', `${index * BUBBLE_STAGGER}ms`);
-        el.style.setProperty('--reveal-duration', '800ms');
+        el.style.setProperty('--reveal-duration', '1200ms');
         el.classList.add('js-reveal');
         targets.push(el);
       });
@@ -274,7 +274,7 @@ function initMarquee() {
 // 演出（styles/components/motion.css）のトリガー。
 // 対象が画面に入ったら .is-in を付ける。概念図は出現が終わったら .is-live でループ演出を開始。
 // prefers-reduced-motion: reduce のときは何もしない（.js-motion を付けないので静止表示のまま）。
-const LIVE_DELAY = 1600; // ms：概念図の出現が終わるまで
+const LIVE_DELAY = 3000; // ms：概念図の出現が終わるまで
 
 function initMotion() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

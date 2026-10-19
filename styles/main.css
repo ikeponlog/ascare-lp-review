@@ -163,6 +163,7 @@ linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.8) 14%, rgba(255, 25
 --lh-sp-body: 1.85;
 --ls-label-pc: 0.87px;
 --ls-label-sp: 0.2967px;
+--radius-video-sp: 4.481px;        
 --radius-6: 6px;
 --radius-8: 8px;
 --radius-10: 10px;
@@ -213,7 +214,7 @@ linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.8) 14%, rgba(255, 25
 --z-header: 100;
 --z-menu: 90;
 --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
---dur-reveal: 500ms;
+--dur-reveal: 750ms; 
 --dur-ui: 200ms;
 }
 }
@@ -1480,7 +1481,7 @@ gap: var(--space-4);
 }
 .hero__media {
 position: relative;
-padding: 0 var(--pad-sp);
+padding: 0 var(--pad-sp) var(--space-5);
 background: var(--color-bg-green-pale);
 }
 .hero__ambassador {
@@ -1536,10 +1537,26 @@ width: 100%;
 height: 142.59%;
 max-width: none;
 }
+.hero__ambassador-img {
+--hand: 19.5% 24.2%, 22.5% 20.8%, 25% 19.4%, 30% 19.6%, 34.2% 23.6%, 36.2% 27.2%, 38% 27.4%, 43% 26.6%,
+45.2% 27.4%, 44.6% 28.4%, 40.5% 29.6%, 37% 31.5%, 34% 34%, 26% 34%, 24.5% 30%, 19.5% 25.7%;
+--hand-start: 19.5% 24.2%;
+--hand-layer: 19.5% 24.2%, 22.5% 20.8%, 25% 19.4%, 30% 19.6%, 34.2% 23.6%, 36.2% 27.2%, 38% 27.4%, 43% 26.6%,
+45.2% 27.4%, 44.6% 28.4%, 40.5% 29.6%, 37% 31.5%, 33.5% 34%, 32.5% 36.8%, 26.5% 36.8%, 26% 34%, 24.5% 30%, 19.5% 25.7%;
+--hand-pivot: 29.5% 33.5%; 
+}
+.hero__ambassador-body img {
+clip-path: polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0, var(--hand), var(--hand-start), 0 0);
+}
+.hero__ambassador-hand img {
+clip-path: polygon(var(--hand-layer));
+transform-origin: var(--hand-pivot);
+}
 .hero__video {
 position: relative;
 width: min(338px, 100%);
-height: 230px;
+height: auto;
+aspect-ratio: 338 / 198;
 margin: var(--space-3) auto 0;
 }
 .hero__video-button,
@@ -1549,14 +1566,17 @@ display: block;
 width: 100%;
 height: 100%;
 overflow: hidden;
-border: 4px solid var(--color-white);
-border-radius: var(--radius-6);
+border: 2px solid var(--color-white);
+border-radius: var(--radius-video-sp);
 }
 .hero__video-thumb,
 .hero__video-thumb img {
 width: 100%;
 height: 100%;
 object-fit: cover;
+}
+.hero__video-thumb img {
+object-position: 23% 3%;
 }
 .hero__video-button::after {
 content: "";
@@ -1570,8 +1590,8 @@ position: absolute;
 left: 50%;
 top: 50%;
 z-index: 1;
-width: 63px;
-height: 65.377px;
+width: 58px;
+height: 58px;
 transform: translate(-50%, -50%);
 transition: transform var(--dur-ui) ease;
 }
@@ -1748,22 +1768,38 @@ margin: 0;
 clip-path: inset(-80px -80px 10px -80px);
 }
 .hero__ambassador-img img {
-position: static;
+inset: 0;
 width: 100%;
 height: 100%;
+}
+.hero__ambassador-img {
+--hand: 19.5% 27.5%, 23% 21%, 29% 20.5%, 34% 22.5%, 36.5% 31%, 38% 32.8%, 42% 31.5%, 44.9% 32%,
+44.7% 33.4%, 41% 35.3%, 37.5% 37%, 34.5% 39.8%, 32% 42%, 25% 42%, 24.5% 37%, 19.5% 31.5%;
+--hand-start: 19.5% 27.5%;
+--hand-layer: 19.5% 27.5%, 23% 21%, 29% 20.5%, 34% 22.5%, 36.5% 31%, 38% 32.8%, 42% 31.5%, 44.9% 32%,
+44.7% 33.4%, 41% 35.3%, 37.5% 37%, 34.5% 39.8%, 33% 41.5%, 31.5% 45.5%, 25.5% 45.5%, 25% 42%, 24.5% 37%, 19.5% 31.5%;
+--hand-pivot: 28.5% 41.5%;
 }
 .hero__video {
 position: absolute;
 z-index: 2;
 left: calc(var(--u) * 898);
-top: calc(var(--u) * 420);
+top: calc(var(--u) * 453.12);
 width: calc(var(--u) * 431);
-height: calc(var(--u) * 289);
+height: calc(var(--u) * 255.88);
 margin: 0;
 }
+.hero__video-button,
+.hero__video iframe {
+border-width: 4px;
+border-radius: var(--radius-6);
+}
+.hero__video-thumb img {
+object-position: 0% 97%;
+}
 .hero__video-play {
-width: calc(var(--u) * 63);
-height: calc(var(--u) * 65.377);
+width: calc(var(--u) * 57.88);
+height: calc(var(--u) * 57.88);
 }
 }
 @media (min-width: 720px) and (max-width: 1023.98px) {
@@ -1778,12 +1814,12 @@ padding: var(--space-10) var(--space-6);
 order: -1;
 width: 100%;
 height: auto;
-aspect-ratio: 862 / 578;
+aspect-ratio: 431 / 255.88;
 margin: 0;
 }
 .hero__ambassador {
 height: auto;
-aspect-ratio: 862 / 578;
+aspect-ratio: 431 / 255.88;
 align-items: flex-end;
 }
 .hero__ribbon {
@@ -4583,18 +4619,24 @@ opacity: 0;
 .js-motion [data-shiho].is-in {
 transform-origin: 50% 100%;
 animation:
-shiho-in 700ms var(--ease-out) both,
-shiho-breathe 2.2s ease-in-out 700ms 2;
+shiho-in 1050ms var(--ease-out) both,
+shiho-breathe 2.86s ease-in-out 1050ms 2;
 }
 .js-motion [data-shiho="wave"].is-in {
 animation:
-shiho-in 700ms var(--ease-out) both,
-shiho-sway 2.2s ease-in-out 700ms 2;
+shiho-in 1050ms var(--ease-out) both,
+shiho-sway 2.86s ease-in-out 1050ms 2;
 }
 .js-motion .hero__ambassador-img[data-shiho].is-in {
-animation:
-shiho-in 700ms var(--ease-out) both,
-shiho-sway-soft 2.2s ease-in-out 700ms 2;
+animation: shiho-in 1050ms var(--ease-out) both;
+}
+.js-motion .hero__ambassador-img[data-shiho].is-in .hero__ambassador-hand img {
+animation: hand-wave 1.8s ease-in-out 1050ms infinite;
+}
+@keyframes hand-wave {
+0%, 100% { rotate: 0deg; }
+25% { rotate: -7deg; }
+75% { rotate: 7deg; }
 }
 @media (min-width: 1024px) {
 .js-motion .hero__ambassador-img[data-shiho].is-in {
@@ -4602,17 +4644,19 @@ opacity: 1;
 animation: none;
 }
 .js-motion .hero__ambassador-img[data-shiho].is-in img {
-transform-origin: 50% 100%;
+animation: shiho-in 1050ms var(--ease-out) both;
+}
+.js-motion .hero__ambassador-img[data-shiho].is-in .hero__ambassador-hand img {
 animation:
-shiho-in 700ms var(--ease-out) both,
-shiho-sway-soft 2.2s ease-in-out 700ms 2;
+shiho-in 1050ms var(--ease-out) both,
+hand-wave 1.8s ease-in-out 1050ms infinite;
 }
 }
 @media (max-width: 1023.98px) {
 .js-motion .cta__person[data-shiho].is-in {
 animation:
-shiho-in 700ms var(--ease-out) both,
-shiho-sway-center 2.2s ease-in-out 700ms 2;
+shiho-in 1050ms var(--ease-out) both,
+shiho-sway-center 2.86s ease-in-out 1050ms 2;
 }
 }
 @keyframes shiho-in {
@@ -4665,10 +4709,10 @@ height: calc(var(--u) * 330);
 border: calc(var(--u) * 3) solid rgba(118, 194, 52, 0.55);
 border-radius: 50%;
 opacity: 0;
-animation: solution-pulse 3.2s ease-out infinite;
+animation: solution-pulse 4.16s ease-out infinite;
 }
 .solution-fx__pulse--2 {
-animation-delay: 1.6s;
+animation-delay: 2.08s;
 }
 @keyframes solution-pulse {
 0% { opacity: 0.9; scale: 1; }
@@ -4689,10 +4733,10 @@ opacity: 1;
 opacity: 0;
 }
 .js-motion .solution-diagram.is-in .solution-diagram__bg {
-animation: diagram-in 900ms var(--ease-out) both;
+animation: diagram-in 1350ms var(--ease-out) both;
 }
 .js-motion .solution-diagram.is-in :is(.solution-diagram__logo, .solution-diagram__name, .solution-diagram__en) {
-animation: fade-up 600ms var(--ease-out) 350ms both;
+animation: fade-up 900ms var(--ease-out) 520ms both;
 }
 .sol-node--care { --i: 0; }
 .sol-node--app { --i: 1; }
@@ -4702,8 +4746,8 @@ animation: fade-up 600ms var(--ease-out) 350ms both;
 .sol-node--manner { --i: 5; }
 .sol-node--legal { --i: 6; }
 .js-motion .solution-diagram.is-in .sol-node > * {
-animation: fade-up 600ms var(--ease-out) both;
-animation-delay: calc(700ms + var(--i, 0) * 120ms);
+animation: fade-up 900ms var(--ease-out) both;
+animation-delay: calc(1050ms + var(--i, 0) * 180ms);
 }
 @keyframes diagram-in {
 from { opacity: 0; scale: 0.94; }
@@ -4717,15 +4761,15 @@ to { opacity: 1; translate: 0 0; }
 clip-path: inset(0 100% 0 0);
 }
 .js-motion .vc-pc.is-in .vc-pc__phase {
-animation: wipe-in 700ms var(--ease-out) both;
+animation: wipe-in 1050ms var(--ease-out) both;
 }
-.js-motion .vc-pc.is-in .vc-pc__phase--02 { animation-delay: 250ms; }
-.js-motion .vc-pc.is-in .vc-pc__phase--03 { animation-delay: 500ms; }
+.js-motion .vc-pc.is-in .vc-pc__phase--02 { animation-delay: 380ms; }
+.js-motion .vc-pc.is-in .vc-pc__phase--03 { animation-delay: 750ms; }
 .js-motion .vc-pc__chevrons {
 clip-path: inset(0 100% 0 0);
 }
 .js-motion .vc-pc.is-in .vc-pc__chevrons {
-animation: wipe-in 1500ms cubic-bezier(0.45, 0, 0.25, 1) 300ms both;
+animation: wipe-in 2250ms cubic-bezier(0.45, 0, 0.25, 1) 450ms both;
 }
 .vc-step--1 { --i: 0; }
 .vc-step--2 { --i: 1; }
@@ -4737,17 +4781,17 @@ animation: wipe-in 1500ms cubic-bezier(0.45, 0, 0.25, 1) 300ms both;
 opacity: 0;
 }
 .js-motion .vc-pc.is-in .vc-step > span {
-animation: slide-in 600ms var(--ease-out) both;
-animation-delay: calc(450ms + var(--i) * 180ms);
+animation: slide-in 900ms var(--ease-out) both;
+animation-delay: calc(680ms + var(--i) * 270ms);
 }
 .js-motion .vc-sp__phase {
 opacity: 0;
 }
 .js-motion .vc-sp.is-in .vc-sp__phase {
-animation: slide-in 700ms var(--ease-out) both;
+animation: slide-in 1050ms var(--ease-out) both;
 }
-.js-motion .vc-sp.is-in .vc-sp__phase--02 { animation-delay: 250ms; }
-.js-motion .vc-sp.is-in .vc-sp__phase--03 { animation-delay: 500ms; }
+.js-motion .vc-sp.is-in .vc-sp__phase--02 { animation-delay: 380ms; }
+.js-motion .vc-sp.is-in .vc-sp__phase--03 { animation-delay: 750ms; }
 @keyframes wipe-in {
 from { clip-path: inset(0 100% 0 0); }
 to { clip-path: inset(0 0 0 0); }
@@ -4766,12 +4810,12 @@ stroke-dasharray: 1;
 stroke-dashoffset: 1;
 }
 .js-motion .rec-card.is-revealed .rec-card__check-bg {
-animation: check-pop 520ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
-animation-delay: calc(var(--reveal-delay, 0ms) + 250ms);
+animation: check-pop 780ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+animation-delay: calc(var(--reveal-delay, 0ms) + 380ms);
 }
 .js-motion .rec-card.is-revealed .rec-card__check-mark {
-animation: check-draw 420ms ease-out both;
-animation-delay: calc(var(--reveal-delay, 0ms) + 650ms);
+animation: check-draw 630ms ease-out both;
+animation-delay: calc(var(--reveal-delay, 0ms) + 980ms);
 }
 .js-motion .rec-card.is-revealed::before {
 content: "";
@@ -4784,8 +4828,8 @@ border-radius: 50%;
 border: 2px solid var(--color-rose-light);
 opacity: 0;
 pointer-events: none;
-animation: check-ripple 900ms ease-out both;
-animation-delay: calc(var(--reveal-delay, 0ms) + 650ms);
+animation: check-ripple 1350ms ease-out both;
+animation-delay: calc(var(--reveal-delay, 0ms) + 980ms);
 }
 @media (min-width: 1024px) {
 .js-motion .rec-card.is-revealed::before {
@@ -4800,7 +4844,7 @@ left: -5px;
 }
 @media (hover: hover) {
 .rec-card:hover .rec-card__check {
-animation: check-wiggle 600ms ease-in-out;
+animation: check-wiggle 900ms ease-in-out;
 }
 }
 @keyframes check-pop {
@@ -4824,7 +4868,7 @@ to { stroke-dashoffset: 0; }
 clip-path: inset(0 100% 0 0);
 }
 .js-motion .flow-pc.is-in .flow-pc__bg {
-animation: wipe-in 1600ms cubic-bezier(0.45, 0, 0.25, 1) both;
+animation: wipe-in 2400ms cubic-bezier(0.45, 0, 0.25, 1) both;
 }
 .flow-pc__step--1 { --i: 0; }
 .flow-pc__step--2 { --i: 1; }
@@ -4836,8 +4880,8 @@ animation: wipe-in 1600ms cubic-bezier(0.45, 0, 0.25, 1) both;
 opacity: 0;
 }
 .js-motion .flow-pc.is-in .flow-pc__step {
-animation: fade-in 600ms ease-out both;
-animation-delay: calc(150ms + var(--i) * 230ms);
+animation: fade-in 900ms ease-out both;
+animation-delay: calc(220ms + var(--i) * 340ms);
 }
 @keyframes fade-in {
 from { opacity: 0; }
@@ -4852,8 +4896,8 @@ to { opacity: 1; }
 opacity: 0;
 }
 .js-motion .flow-sp.is-in .flow-sp__step {
-animation: fade-in 600ms ease-out both;
-animation-delay: calc(var(--i, 0) * 180ms);
+animation: fade-in 900ms ease-out both;
+animation-delay: calc(var(--i, 0) * 270ms);
 }
 .usecase-compare__card--after {
 position: relative;
@@ -4873,7 +4917,7 @@ transition: opacity 300ms ease;
 pointer-events: none;
 }
 .js-motion .usecase-compare__card--after.is-revealed::before {
-animation: after-glow 3.2s ease-in-out 900ms infinite;
+animation: after-glow 4.16s ease-in-out 1350ms infinite;
 }
 .usecase-compare__card--after .usecase-compare__pill {
 position: relative;
@@ -4886,14 +4930,14 @@ inset: 0;
 width: 40%;
 background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.6), transparent);
 translate: -120% 0;
-animation: pill-shine 3.6s ease-in-out 1.2s infinite;
+animation: pill-shine 4.68s ease-in-out 1.56s infinite;
 }
 .js-motion .usecase-compare__card--after .usecase-compare__list img {
 scale: 0;
 }
 .js-motion .usecase-compare__card--after.is-revealed .usecase-compare__list img {
-animation: check-pop 480ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
-animation-delay: calc(var(--reveal-delay, 0ms) + 400ms + var(--n, 0) * 140ms);
+animation: check-pop 720ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+animation-delay: calc(var(--reveal-delay, 0ms) + 600ms + var(--n, 0) * 210ms);
 }
 .usecase-compare__card--after .usecase-compare__list li:nth-child(2) { --n: 1; }
 .usecase-compare__card--after .usecase-compare__list li:nth-child(3) { --n: 2; }
@@ -4903,7 +4947,7 @@ animation-delay: calc(var(--reveal-delay, 0ms) + 400ms + var(--n, 0) * 140ms);
 transition: translate 200ms ease;
 }
 .js-motion .usecase-compare__arrow {
-animation: arrow-nudge-down 1.6s ease-in-out infinite;
+animation: arrow-nudge-down 2.08s ease-in-out infinite;
 }
 @media (min-width: 1024px) {
 .js-motion .usecase-compare__arrow {
