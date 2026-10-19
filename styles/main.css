@@ -211,6 +211,7 @@ linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.8) 14%, rgba(255, 25
 --container-sp-max: 600px;           
 --header-h-pc: 71px;
 --header-h-sp: 72px;
+--read-progress-h: 3px;          
 --z-header: 100;
 --z-menu: 90;
 --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -837,6 +838,28 @@ margin-left: 42px;
 }
 .menu-toggle {
 display: none;
+}
+}
+@media (prefers-reduced-motion: no-preference) {
+.site-header::after {
+content: "";
+position: absolute;
+inset: auto 0 0;
+height: var(--read-progress-h);
+background: var(--color-primary);
+transform: scaleX(var(--read-progress, 0));
+transform-origin: 0 50%;
+pointer-events: none;
+}
+@supports (animation-timeline: scroll()) {
+.site-header::after {
+animation: read-progress linear both;
+animation-timeline: scroll(root block);
+}
+@keyframes read-progress {
+from { transform: scaleX(0); }
+to { transform: scaleX(1); }
+}
 }
 }
 }

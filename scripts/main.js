@@ -335,7 +335,32 @@ function initToTop() {
   });
 }
 
+// --- read-progress.js
+// ヘッダー下端の読み進みライン（D-95）のフォールバック。
+// CSS の animation-timeline: scroll() に対応していないブラウザ（Firefox など）だけ、
+// スクロール量を --read-progress（0〜1）に入れて同じ線を伸ばす。
+function initReadProgress() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (CSS.supports('animation-timeline: scroll()')) return;
+  const root = document.documentElement;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const max = root.scrollHeight - window.innerHeight;
+    root.style.setProperty('--read-progress', max > 0 ? Math.min(1, window.scrollY / max).toFixed(4) : '0');
+  };
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+}
+
 // ASCare LP — エントリ。機能ごとの ES モジュールを初期化する。
+
 
 
 
@@ -351,4 +376,5 @@ initReveal();
 initMarquee();
 initMotion();
 initToTop();
+initReadProgress();
 })();
